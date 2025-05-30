@@ -14,6 +14,7 @@ import Solutions from './pages/Solutions';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Auth from './pages/Auth';
+import Support from './pages/Support';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/auth" element={<Auth />} />
+              <Route path='/support' element={<Support />}></Route>
             </Routes>
           </AnimatePresence>
         </main>
