@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container-custom pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div>
+          <div className='flex flex-col items-center text-center md:text-start md:items-start'>
             <Link to="/" className="flex items-center gap-2 mb-4">
               <Cpu className="h-6 w-6 text-indigo-500" />
               <div className="flex flex-col">
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className='text-center md:text-start'>
             <h5 className="font-bold mb-4 text-white">Quick Links</h5>
             <ul className="space-y-2">
               <li><Link to="/" className="text-gray-400 hover:text-indigo-400 transition-colors">Home</Link></li>
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
+          <div className='text-center md:text-start'>
             <h5 className="font-bold mb-4 text-white">Our Services</h5>
             <ul className="space-y-2">
               <li><Link to="/services" className="text-gray-400 hover:text-indigo-400 transition-colors">AI Consulting</Link></li>
@@ -63,18 +63,18 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className='text-center md:text-start'>
             <h5 className="font-bold mb-4 text-white">Contact Us</h5>
             <ul className="space-y-4">
-              <li className="flex items-start">
+              <li className="flex flex-col gap-y-2 items-center md:flex-row md:items-start">
                 <MapPin className="h-5 w-5 text-indigo-500 mr-3 mt-0.5" />
                 <span className="text-gray-400">123 AI Avenue, Innovation District, Yangon, Myanmar</span>
               </li>
-              <li className="flex items-center">
+              <li className="flex flex-col gap-y-2 items-center md:flex-row md:items-start">
                 <Phone className="h-5 w-5 text-indigo-500 mr-3" />
                 <span className="text-gray-400">+95 123 456 789</span>
               </li>
-              <li className="flex items-center">
+              <li className="flex flex-col gap-y-2 items-center md:flex-row md:items-start">
                 <Mail className="h-5 w-5 text-indigo-500 mr-3" />
                 <span className="text-gray-400">info@cloudmyanmar.com</span>
               </li>

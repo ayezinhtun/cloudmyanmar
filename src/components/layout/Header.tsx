@@ -115,7 +115,7 @@ const Header = () => {
           className="md:hidden bg-gray-900 border-t border-gray-800 mt-3"
         >
           <div className="container-custom py-4">
-            <ul className="flex flex-col space-y-3">
+            <ul className="flex flex-col space-y-3 items-center">
               {navItems.map((item) => (
                 <li key={item.name}>
                   <NavLink
