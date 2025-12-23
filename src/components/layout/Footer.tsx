@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-start">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
             &copy; {currentYear} Cloud Myanmar. All rights reserved.
           </p>
