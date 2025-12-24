@@ -105,25 +105,25 @@ const Projects = () => {
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
               <div className="flex items-center">
-                <div className="p-2 bg-indigo-900/30 rounded-full text-indigo-400 mr-3">
+                <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Brain className="h-5 w-5" />
                 </div>
                 <span>AI Excellence</span>
               </div>
               <div className="flex items-center">
-                <div className="p-2 bg-indigo-900/30 rounded-full text-indigo-400 mr-3">
+                <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Globe className="h-5 w-5" />
                 </div>
                 <span>Local Impact</span>
               </div>
               <div className="flex items-center">
-                <div className="p-2 bg-indigo-900/30 rounded-full text-indigo-400 mr-3">
+                <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Database className="h-5 w-5" />
                 </div>
                 <span>Data-Driven</span>
               </div>
               <div className="flex items-center">
-                <div className="p-2 bg-indigo-900/30 rounded-full text-indigo-400 mr-3">
+                <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Code className="h-5 w-5" />
                 </div>
                 <span>Innovation</span>
@@ -177,13 +177,13 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-4 right-4 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm">
+                <div className="absolute top-4 right-4 bg-[#E2B478] text-white px-3 py-1 rounded-full text-sm">
                   {project.category}
                 </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-indigo-400 text-sm mb-4">{project.client}</p>
+                <p className="text-[#E2B478] text-sm mb-4">{project.client}</p>
                 <p className="text-gray-400 mb-4">{project.description}</p>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold mb-2">Technologies Used:</h4>
@@ -200,7 +200,7 @@ const Projects = () => {
                   <ul className="space-y-1">
                     {project.outcomes.map((outcome, idx) => (
                       <li key={idx} className="flex items-center text-gray-400 text-sm">
-                        <LineChart className="h-4 w-4 text-indigo-400 mr-2" />
+                        <LineChart className="h-4 w-4 text-[#E2B478] mr-2" />
                         {outcome}
                       </li>
                     ))}

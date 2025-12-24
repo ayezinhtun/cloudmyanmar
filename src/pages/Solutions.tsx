@@ -10,7 +10,7 @@ const Solutions = () => {
     {
       title: "Healthcare AI",
       description: "Advanced AI solutions for healthcare providers and medical institutions",
-      icon: <HeartPulse className="h-10 w-10 text-indigo-500" />,
+      icon: <HeartPulse className="h-10 w-10 text-[#E2B478]" />,
       features: [
         "Medical image analysis",
         "Patient data analytics",
@@ -21,7 +21,7 @@ const Solutions = () => {
     {
       title: "Financial Analytics",
       description: "AI-powered financial analysis and risk management solutions",
-      icon: <LineChart className="h-10 w-10 text-purple-500" />,
+      icon: <LineChart className="h-10 w-10 text-[#DBE278]" />,
       features: [
         "Risk assessment",
         "Fraud detection",
@@ -32,7 +32,7 @@ const Solutions = () => {
     {
       title: "Manufacturing Intelligence",
       description: "Smart manufacturing solutions for Industry 4.0",
-      icon: <Factory className="h-10 w-10 text-indigo-500" />,
+      icon: <Factory className="h-10 w-10 text-[#E2B478]" />,
       features: [
         "Predictive maintenance",
         "Quality control",
@@ -43,7 +43,7 @@ const Solutions = () => {
     {
       title: "Retail Analytics",
       description: "AI solutions for modern retail businesses",
-      icon: <ShoppingBag className="h-10 w-10 text-purple-500" />,
+      icon: <ShoppingBag className="h-10 w-10 text-[#DBE278]" />,
       features: [
         "Customer behavior analysis",
         "Inventory optimization",
@@ -54,7 +54,7 @@ const Solutions = () => {
     {
       title: "Document Intelligence",
       description: "Automated document processing and analysis",
-      icon: <FileText className="h-10 w-10 text-indigo-500" />,
+      icon: <FileText className="h-10 w-10 text-[#E2B478]" />,
       features: [
         "Text extraction",
         "Document classification",
@@ -65,7 +65,7 @@ const Solutions = () => {
     {
       title: "Cloud Solutions",
       description: "Cloud-native AI infrastructure and services",
-      icon: <Cloud className="h-10 w-10 text-purple-500" />,
+      icon: <Cloud className="h-10 w-10 text-[#DBE278]" />,
       features: [
         "Cloud migration",
         "Scalable infrastructure",
@@ -122,22 +122,22 @@ const Solutions = () => {
     {
       title: "Scalable Architecture",
       description: "Our solutions are built to grow with your business",
-      icon: <Building2 className="h-6 w-6 text-indigo-400" />
+      icon: <Building2 className="h-6 w-6 text-[#E2B478]" />
     },
     {
       title: "Data Security",
       description: "Enterprise-grade security measures to protect your data",
-      icon: <ShieldCheck className="h-6 w-6 text-indigo-400" />
+      icon: <ShieldCheck className="h-6 w-6 text-[#E2B478]" />
     },
     {
       title: "Custom Development",
       description: "Tailored solutions to meet your specific needs",
-      icon: <Code2 className="h-6 w-6 text-indigo-400" />
+      icon: <Code2 className="h-6 w-6 text-[#E2B478]" />
     },
     {
       title: "Data Integration",
       description: "Seamless integration with your existing systems",
-      icon: <Database className="h-6 w-6 text-indigo-400" />
+      icon: <Database className="h-6 w-6 text-[#E2B478]" />
     }
   ];
 
@@ -160,25 +160,25 @@ const Solutions = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div className="flex items-center">
-                <div className="p-2 bg-indigo-900/30 rounded-full text-indigo-400 mr-3">
+                <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Brain className="h-5 w-5" />
                 </div>
                 <span>Industry Expertise</span>
               </div>
               <div className="flex items-center">
-                <div className="p-2 bg-indigo-900/30 rounded-full text-indigo-400 mr-3">
+                <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Code2 className="h-5 w-5" />
                 </div>
                 <span>Custom Solutions</span>
               </div>
               <div className="flex items-center">
-                <div className="p-2 bg-indigo-900/30 rounded-full text-indigo-400 mr-3">
+                <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Database className="h-5 w-5" />
                 </div>
                 <span>Data Integration</span>
               </div>
               <div className="flex items-center">
-                <div className="p-2 bg-indigo-900/30 rounded-full text-indigo-400 mr-3">
+                <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <ShieldCheck className="h-5 w-5" />
                 </div>
                 <span>Enterprise Security</span>
@@ -234,14 +234,14 @@ const Solutions = () => {
               <ul className="space-y-2 mb-6">
                 {solution.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-gray-300">
-                    <div className="mr-2 text-indigo-400">
+                    <div className="mr-2 text-[#E2B478]">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                     </div>
                     {feature}
                   </li>
                 ))}
               </ul>
-              <Link to="/contact" className="text-indigo-400 hover:text-indigo-300 inline-flex items-center">
+              <Link to="/contact" className="text-[#E2B478] hover:text-[#ebcba2] inline-flex items-center">
                 Learn more <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Card>
@@ -267,7 +267,7 @@ const Solutions = () => {
               className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8"
             >
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-full bg-indigo-900/30 flex items-center justify-center text-indigo-400 mr-4">
+                <div className="w-12 h-12 rounded-full bg-gray-800/80 flex items-center justify-center text-[#E2B478] mr-4">
                   {industry.icon}
                 </div>
                 <h3 className="text-xl font-bold">{industry.name}</h3>
@@ -275,7 +275,7 @@ const Solutions = () => {
               <ul className="space-y-3">
                 {industry.solutions.map((solution, idx) => (
                   <li key={idx} className="flex items-start">
-                    <div className="mr-2 mt-1 text-indigo-400">
+                    <div className="mr-2 mt-1 text-[#E2B478]">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                     </div>
                     <span className="text-gray-300">{solution}</span>
@@ -297,7 +297,7 @@ const Solutions = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {features.map((feature, index) => (
             <Card key={index} delay={index} className="p-8 text-center">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-900/30">
+              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-800/80">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold mb-4">{feature.title}</h3>

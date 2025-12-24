@@ -100,7 +100,7 @@ const Clients = () => {
             <div className="grid grid-cols-2 gap-6 mb-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-indigo-400 mb-2">{stat.value}</div>
+                  <div className="text-3xl font-bold text-[#E2B478] mb-2">{stat.value}</div>
                   <div className="text-gray-400">{stat.label}</div>
                 </div>
               ))}
@@ -157,7 +157,7 @@ const Clients = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">{client.name}</h3>
-                  <p className="text-indigo-400">{client.industry}</p>
+                  <p className="text-[#E2B478]">{client.industry}</p>
                 </div>
               </div>
               <p className="text-gray-400 mb-6">{client.description}</p>

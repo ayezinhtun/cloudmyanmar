@@ -36,34 +36,34 @@ const Support = () => {
     }
   ];
 
-  const resources = [
-    {
-      title: "Documentation",
-      description: "Comprehensive guides and API documentation",
-      icon: <BookOpen className="h-6 w-6" />,
-      link: "/docs"
-    },
-    {
-      title: "Community Forum",
-      description: "Connect with other users and share knowledge",
-      icon: <Users className="h-6 w-6" />,
-      link: "/community"
-    },
-    {
-      title: "Video Tutorials",
-      description: "Step-by-step visual guides and tutorials",
-      icon: <HeadphonesIcon className="h-6 w-6" />,
-      link: "/tutorials"
-    }
-  ];
+  // const resources = [
+  //   {
+  //     title: "Documentation",
+  //     description: "Comprehensive guides and API documentation",
+  //     icon: <BookOpen className="h-6 w-6" />,
+  //     link: "/docs"
+  //   },
+  //   {
+  //     title: "Community Forum",
+  //     description: "Connect with other users and share knowledge",
+  //     icon: <Users className="h-6 w-6" />,
+  //     link: "/community"
+  //   },
+  //   {
+  //     title: "Video Tutorials",
+  //     description: "Step-by-step visual guides and tutorials",
+  //     icon: <HeadphonesIcon className="h-6 w-6" />,
+  //     link: "/tutorials"
+  //   }
+  // ];
 
   const supportChannels = [
-    {
-      title: "Live Chat",
-      description: "Get instant help from our support team",
-      icon: <MessageCircle className="h-6 w-6" />,
-      action: "Start Chat"
-    },
+    // {
+    //   title: "Live Chat",
+    //   description: "Get instant help from our support team",
+    //   icon: <MessageCircle className="h-6 w-6" />,
+    //   action: "Start Chat"
+    // },
     {
       title: "Phone Support",
       description: "Speak directly with our experts",
@@ -126,12 +126,12 @@ const Support = () => {
         title="Get Support"
         subtitle="Choose your preferred way to get help from our team"
         centered
-        className="bg-gray-950"
+        className="bg-gradient-to-b from-gray-950 to-gray-900"
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           {supportChannels.map((channel, index) => (
             <Card key={index} delay={index} className="p-8 text-center">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-900/30 text-indigo-400">
+              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-800/80 text-[#E2B478]">
                 {channel.icon}
               </div>
               <h3 className="text-xl font-bold mb-4">{channel.title}</h3>
@@ -145,7 +145,7 @@ const Support = () => {
       </Section>
 
       {/* Resources Section */}
-      <Section
+      {/* <Section
         title="Resources"
         subtitle="Explore our comprehensive collection of resources"
         centered
@@ -164,14 +164,14 @@ const Support = () => {
             </Link>
           ))}
         </div>
-      </Section>
+      </Section> */}
 
       {/* FAQ Section */}
       <Section
         title="Frequently Asked Questions"
         subtitle="Find quick answers to common questions"
         centered
-        className="bg-gray-900"
+        className=""
       >
         <div className="max-w-3xl mx-auto mt-12">
           <div className="space-y-6">
@@ -185,7 +185,7 @@ const Support = () => {
                 className="bg-gray-800/50 rounded-lg p-6"
               >
                 <h3 className="text-xl font-bold mb-3 flex items-start">
-                  <HelpCircle className="h-6 w-6 text-indigo-400 mr-3 mt-1 flex-shrink-0" />
+                  <HelpCircle className="h-6 w-6 text-[#E2B478] mr-3 mt-1 flex-shrink-0" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-400 ml-9">{faq.answer}</p>
@@ -203,10 +203,10 @@ const Support = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-gradient-to-r from-indigo-500 to-purple-500 p-1 rounded-xl"
+            className="bg-gradient-to-r from-[#E2B478] to-[#DBE278] p-1 rounded-xl"
           >
             <div className="bg-gray-900 rounded-lg p-8">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-900/30 text-indigo-400">
+              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-800/80 text-[#E2B478]">
                 <LifeBuoy className="h-8 w-8" />
               </div>
               <h2 className="text-3xl font-bold mb-4">Still Need Help?</h2>

@@ -6,40 +6,40 @@ import Button from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 
 const About = () => {
-  const teamMembers = [
-    {
-      name: "Aung Min",
-      title: "CEO & Founder",
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      description: "With over 15 years in AI and tech leadership, Aung leads our strategic vision and growth initiatives."
-    },
-    {
-      name: "Lin Moe",
-      title: "CTO",
-      image: "https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      description: "Lin brings deep expertise in machine learning and systems architecture to drive our technological innovation."
-    },
-    {
-      name: "Kyi Phyu",
-      title: "Head of AI Research",
-      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      description: "Leading our R&D efforts, Kyi focuses on developing cutting-edge AI algorithms and solutions."
-    },
-    {
-      name: "Tun Tun",
-      title: "Director of Operations",
-      image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      description: "Ensuring smooth execution of all projects, Tun oversees our day-to-day operations and client delivery."
-    },
-  ];
+  // const teamMembers = [
+  //   {
+  //     name: "Aung Min",
+  //     title: "CEO & Founder",
+  //     image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //     description: "With over 15 years in AI and tech leadership, Aung leads our strategic vision and growth initiatives."
+  //   },
+  //   {
+  //     name: "Lin Moe",
+  //     title: "CTO",
+  //     image: "https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //     description: "Lin brings deep expertise in machine learning and systems architecture to drive our technological innovation."
+  //   },
+  //   {
+  //     name: "Kyi Phyu",
+  //     title: "Head of AI Research",
+  //     image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //     description: "Leading our R&D efforts, Kyi focuses on developing cutting-edge AI algorithms and solutions."
+  //   },
+  //   {
+  //     name: "Tun Tun",
+  //     title: "Director of Operations",
+  //     image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //     description: "Ensuring smooth execution of all projects, Tun oversees our day-to-day operations and client delivery."
+  //   },
+  // ];
 
   const values = [
-    { title: "Innovation", icon: <Lightbulb className="h-8 w-8 text-indigo-400" />, description: "We constantly push the boundaries of what's possible with AI" },
-    { title: "Excellence", icon: <Star className="h-8 w-8 text-indigo-400" />, description: "We strive for the highest quality in everything we do" },
-    { title: "Integrity", icon: <Shield className="h-8 w-8 text-indigo-400" />, description: "We operate with transparency and ethical responsibility" },
-    { title: "Collaboration", icon: <Users className="h-8 w-8 text-indigo-400" />, description: "We work closely with clients to ensure their success" },
-    { title: "Passion", icon: <Heart className="h-8 w-8 text-indigo-400" />, description: "We're driven by our love for technology and its potential" },
-    { title: "Impact", icon: <Target className="h-8 w-8 text-indigo-400" />, description: "We aim to make a meaningful difference for our clients" },
+    { title: "Innovation", icon: <Lightbulb className="h-8 w-8 text-[#E2B478]" />, description: "We constantly push the boundaries of what's possible with AI" },
+    { title: "Excellence", icon: <Star className="h-8 w-8 text-[#E2B478]" />, description: "We strive for the highest quality in everything we do" },
+    { title: "Integrity", icon: <Shield className="h-8 w-8 text-[#E2B478]" />, description: "We operate with transparency and ethical responsibility" },
+    { title: "Collaboration", icon: <Users className="h-8 w-8 text-[#E2B478]" />, description: "We work closely with clients to ensure their success" },
+    { title: "Passion", icon: <Heart className="h-8 w-8 text-[#E2B478]" />, description: "We're driven by our love for technology and its potential" },
+    { title: "Impact", icon: <Target className="h-8 w-8 text-[#E2B478]" />, description: "We aim to make a meaningful difference for our clients" },
   ];
 
   const achievements = [
@@ -67,19 +67,19 @@ const About = () => {
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
               <div className="flex items-center">
-                <div className="p-2 bg-indigo-900/30 rounded-full text-indigo-400 mr-3">
+                <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Check className="h-5 w-5" />
                 </div>
                 <span>Founded in 2015</span>
               </div>
               <div className="flex items-center">
-                <div className="p-2 bg-indigo-900/30 rounded-full text-indigo-400 mr-3">
+                <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Check className="h-5 w-5" />
                 </div>
                 <span>Based in Yangon</span>
               </div>
               <div className="flex items-center">
-                <div className="p-2 bg-indigo-900/30 rounded-full text-indigo-400 mr-3">
+                <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Check className="h-5 w-5" />
                 </div>
                 <span>25+ AI Specialists</span>
@@ -124,7 +124,7 @@ const About = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           <Card className="p-8">
-            <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-900/30 text-indigo-400">
+            <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#E2B478]/5 text-[#E2B478]">
               <Cpu className="h-8 w-8" />
             </div>
             <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
@@ -137,7 +137,7 @@ const About = () => {
           </Card>
           
           <Card className="p-8">
-            <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-900/30 text-purple-400">
+            <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#DBE278]/5 text-[#DBE278] ">
               <Brain className="h-8 w-8" />
             </div>
             <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
@@ -155,7 +155,7 @@ const About = () => {
       <Section
         title="Our Story"
         subtitle="From a small startup to Myanmar's leading AI solutions provider"
-        className="bg-gradient-to-b from-gray-950 to-gray-900"
+        className=""
       >
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-12">
           <div className="lg:col-span-3">
@@ -189,7 +189,7 @@ const About = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <h3 className="text-3xl md:text-4xl font-bold text-indigo-400 mb-2">{item.count}</h3>
+                  <h3 className="text-3xl md:text-4xl font-bold text-[#E2B478] mb-2">{item.count}</h3>
                   <p className="text-gray-400">{item.label}</p>
                 </motion.div>
               ))}
@@ -210,7 +210,7 @@ const About = () => {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent flex flex-col justify-end p-6">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600/90 mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#E2B478] mb-4">
                   <Trophy className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">Our Achievements</h3>
@@ -231,7 +231,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {values.map((value, index) => (
             <Card key={index} delay={index} className="p-8">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-900/30">
+              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-800/80">
                 {value.icon}
               </div>
               <h3 className="text-xl font-bold mb-4">{value.title}</h3>
@@ -242,7 +242,7 @@ const About = () => {
       </Section>
       
       {/* Our Team Section */}
-      <Section
+      {/* <Section
         title="Meet Our Leadership Team"
         subtitle="The visionaries behind Cloud Myanmar"
         centered
@@ -267,10 +267,10 @@ const About = () => {
             </Card>
           ))}
         </div>
-      </Section>
+      </Section> */}
       
       {/* Awards Section */}
-      <Section
+      {/* <Section
         title="Awards & Recognition"
         subtitle="Our commitment to excellence has been recognized across the industry"
         centered
@@ -301,10 +301,10 @@ const About = () => {
             <p className="text-gray-400">Myanmar Digital Economy Association</p>
           </Card>
         </div>
-      </Section>
+      </Section> */}
       
       {/* CTA Section */}
-      <Section className="bg-gradient-to-t from-gray-950 to-gray-900">
+      <Section className="">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

@@ -27,7 +27,7 @@ const Card = ({
       whileHover={hoverEffect ? { y: -8, transition: { duration: 0.3 } } : undefined}
       className={`
         bg-gray-800/70 backdrop-blur-sm rounded-xl overflow-hidden
-        ${hoverEffect ? 'transition-all duration-300 shadow-lg hover:shadow-indigo-900/20' : ''}
+        ${hoverEffect ? 'transition-all duration-300 shadow-lg hover:shadow-[#E2B478]/10' : ''}
         ${className}
       `}
     >

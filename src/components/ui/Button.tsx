@@ -23,11 +23,12 @@ const Button = ({
 }: ButtonProps) => {
   // Variant styles
   const variantStyles = {
-    primary: 'bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500',
+    primary: 'bg-[#E2B478] text-black hover:bg-[#ebcba2] focus:ring-[#E2B478]',
     secondary: 'bg-purple-600 text-white hover:bg-purple-700 focus:ring-purple-500',
     outline: 'border border-gray-300 text-gray-100 hover:bg-gray-800 focus:ring-gray-500',
     ghost: 'text-gray-300 hover:text-white hover:bg-gray-800 focus:ring-gray-500',
   };
+
 
   // Size styles
   const sizeStyles = {

@@ -11,17 +11,17 @@ const Home = () => {
     {
       title: "AI Consulting",
       description: "Get expert guidance on implementing AI solutions for your business challenges.",
-      icon: <Brain className="h-10 w-10 text-indigo-500" />,
+      icon: <Brain className="h-10 w-10 text-[#E2B478]" />,
     },
     {
       title: "Machine Learning",
       description: "Leverage data-driven insights with custom machine learning models tailored to your needs.",
-      icon: <Server className="h-10 w-10 text-purple-500" />,
+      icon: <Server className="h-10 w-10 text-[#DBE278]" />,
     },
     {
       title: "Data Analytics",
       description: "Transform raw data into actionable business intelligence with our advanced analytics.",
-      icon: <BarChartBig className="h-10 w-10 text-indigo-500" />,
+      icon: <BarChartBig className="h-10 w-10 text-[#E2B478]" />,
     },
   ];
 
@@ -29,22 +29,22 @@ const Home = () => {
     {
       name: "TensorFlow",
       description: "Deep learning and neural networks",
-      icon: <Brain className="h-8 w-8 text-indigo-400" />
+      icon: <Brain className="h-8 w-8 text-[#E2B478]" />
     },
     {
       name: "PyTorch",
       description: "Advanced machine learning models",
-      icon: <Server className="h-8 w-8 text-purple-400" />
+      icon: <Server className="h-8 w-8 text-[#DBE278]" />
     },
     {
       name: "Scikit-Learn",
       description: "Statistical modeling & analysis",
-      icon: <LineChart className="h-8 w-8 text-indigo-400" />
+      icon: <LineChart className="h-8 w-8 text-[#E2B478]" />
     },
     {
       name: "Cloud AI",
       description: "Scalable cloud infrastructure",
-      icon: <Globe className="h-8 w-8 text-purple-400" />
+      icon: <Globe className="h-8 w-8 text-[#DBE278]" />
     }
   ];
 
@@ -125,7 +125,7 @@ const Home = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           <Card delay={0} className="p-8 text-center">
-            <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-900/30 text-indigo-400">
+            <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-800/80 text-[#E2B478] ">
               <Cpu className="h-8 w-8" />
             </div>
             <h3 className="text-xl font-bold mb-4">Our Mission</h3>
@@ -133,7 +133,7 @@ const Home = () => {
           </Card>
           
           <Card delay={1} className="p-8 text-center">
-            <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-900/30 text-purple-400">
+            <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-800/80 text-[#DBE278] ">
               <Stars className="h-8 w-8" />
             </div>
             <h3 className="text-xl font-bold mb-4">Our Vision</h3>
@@ -141,7 +141,7 @@ const Home = () => {
           </Card>
           
           <Card delay={2} className="p-8 text-center">
-            <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-900/30 text-indigo-400">
+            <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-800/80 text-[#E2B478]">
               <CircleSlash2 className="h-8 w-8" />
             </div>
             <h3 className="text-xl font-bold mb-4">Our Values</h3>
@@ -177,7 +177,7 @@ const Home = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">{service.title}</h3>
               <p className="text-gray-400 mb-6">{service.description}</p>
-              <Link to="/services" className="text-indigo-400 hover:text-indigo-300 inline-flex items-center">
+              <Link to="/services" className="text-[#E2B478] hover:text-[#ebcba2] inline-flex items-center">
                 Learn more <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Card>
@@ -207,7 +207,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {technologies.map((tech, index) => (
             <Card key={index} delay={index} className="p-8 text-center">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-900/30">
+              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-800/80">
                 {tech.icon}
               </div>
               <h3 className="text-xl font-bold mb-2">{tech.name}</h3>
@@ -229,7 +229,7 @@ const Home = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="text-4xl md:text-5xl font-bold text-indigo-400 mb-2">{stat.value}</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#E2B478] mb-2">{stat.value}</div>
               <div className="text-gray-400">{stat.label}</div>
             </motion.div>
           ))}
@@ -269,7 +269,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {features.map((feature, index) => (
             <Card key={index} delay={index} className="p-8 text-center">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-900/30 text-indigo-400">
+              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-800/80 text-[#E2B478]">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
@@ -280,7 +280,7 @@ const Home = () => {
       </Section>
 
       {/* Team Section */}
-      <Section
+      {/* <Section
         title="Meet Our Team"
         subtitle="The experts behind our success"
         centered
@@ -304,10 +304,10 @@ const Home = () => {
             </Card>
           ))}
         </div>
-      </Section>
+      </Section> */}
 
       {/* Awards Section */}
-      <Section
+      {/* <Section
         title="Recognition & Awards"
         subtitle="Our commitment to excellence"
         centered
@@ -338,7 +338,7 @@ const Home = () => {
             <p className="text-gray-400">Myanmar Digital Economy Association</p>
           </Card>
         </div>
-      </Section>
+      </Section> */}
       
       {/* CTA Section */}
       <Section className="bg-gradient-to-t from-gray-950 to-gray-900">

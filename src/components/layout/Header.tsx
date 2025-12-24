@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, X, Cpu } from 'lucide-react';
+import logo from '../../assets/logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,22 +44,14 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <motion.div
-              initial={{ rotate: -10 }}
-              animate={{ rotate: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Cpu className="h-8 w-8 text-indigo-500" />
-            </motion.div>
+          <Link to="/">
             <motion.div
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex flex-col"
             >
-              <span className="text-xl font-bold tracking-tight">Cloud</span>
-              <span className="text-xs text-indigo-400 -mt-1">Myanmar</span>
+              <img src={logo} alt="" className='h-10 w-24 object-cover' />
             </motion.div>
           </Link>
 
@@ -81,14 +74,14 @@ const Header = () => {
           </nav>
 
           {/* Auth Buttons (Desktop) */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* <div className="hidden md:flex items-center space-x-4">
             <Link to="/auth" className="btn btn-outline py-2 px-4">
               Sign In
             </Link>
             <Link to="/auth" className="btn btn-primary py-2 px-4">
               Sign Up
             </Link>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button 
@@ -129,14 +122,14 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col space-y-3 mt-6">
+            {/* <div className="flex flex-col space-y-3 mt-6">
               <Link to="/auth" className="btn btn-outline w-full">
                 Sign In
               </Link>
               <Link to="/auth" className="btn btn-primary w-full">
                 Sign Up
               </Link>
-            </div>
+            </div> */}
           </div>
         </motion.div>
       )}

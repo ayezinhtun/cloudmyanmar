@@ -17,20 +17,20 @@ type ContactFormData = {
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  
+
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>();
-  
+
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-    
+
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
+
     console.log('Form submitted:', data);
     setIsSubmitting(false);
     setIsSubmitted(true);
     reset();
-    
+
     // Reset success message after 5 seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -53,56 +53,59 @@ const Contact = () => {
             <p className="text-xl text-gray-300 mb-8">
               Have questions about our AI solutions? Ready to start your digital transformation journey? We're here to help.
             </p>
-            
+
             <div className="space-y-6 mb-8">
               <div className="flex items-start">
-                <div className="mr-4 p-2 bg-indigo-900/30 rounded-full text-indigo-400 mt-1">
+                <div className="mr-4 p-2 bg-gray-800/80 rounded-full text-[#E2B478] mt-1">
                   <MapPin className="h-6 w-6" />
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Our Location</h4>
-                  <p className="text-gray-400">123 AI Avenue, Innovation District, Yangon, Myanmar</p>
+                  <p className="text-gray-400 mb-1">Room No. M-723, Sanchaung Housing Estate, Sanchaung Road, Sanchaung Township, Yangon, Myanmar</p>
+                  <p className="text-gray-400">Padumma Road, Shwe Kyapin Ward, Naypyidaw, Myanmar</p>
+
                 </div>
               </div>
-              
+
               <div className="flex items-start">
-                <div className="mr-4 p-2 bg-indigo-900/30 rounded-full text-indigo-400 mt-1">
+                <div className="mr-4 p-2 bg-gray-800/80 rounded-full text-[#E2B478] mt-1">
                   <Mail className="h-6 w-6" />
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Email Us</h4>
-                  <p className="text-gray-400">info@cloudmyanmar.com</p>
+                  <p className="text-gray-400">sales@bytematrixmyanmar.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
-                <div className="mr-4 p-2 bg-indigo-900/30 rounded-full text-indigo-400 mt-1">
+                <div className="mr-4 p-2 bg-gray-800/80 rounded-full text-[#E2B478] mt-1">
                   <Phone className="h-6 w-6" />
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Call Us</h4>
-                  <p className="text-gray-400">+95 123 456 789</p>
+                  <p className="text-gray-400 mb-1">+959 408 833 155</p>
+                  <p className="text-gray-400">+959 250 817 798</p>
                 </div>
               </div>
             </div>
-            
+
             <div className="flex space-x-4">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 aria-label="Facebook"
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 aria-label="Twitter"
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 aria-label="LinkedIn"
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-colors"
               >
@@ -110,7 +113,7 @@ const Contact = () => {
               </a>
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -118,7 +121,7 @@ const Contact = () => {
             className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl shadow-xl"
           >
             <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-            
+
             {isSubmitted ? (
               <div className="bg-green-900/30 border border-green-700 rounded-lg p-4 text-green-400">
                 <h3 className="font-bold flex items-center">
@@ -132,7 +135,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
-                      Your Name <span className="text-indigo-400">*</span>
+                      Your Name <span className="text-[#E2B478]">*</span>
                     </label>
                     <input
                       id="name"
@@ -145,15 +148,15 @@ const Contact = () => {
                       <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>
                     )}
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
-                      Email Address <span className="text-indigo-400">*</span>
+                      Email Address <span className="text-[#E2B478]">*</span>
                     </label>
                     <input
                       id="email"
                       type="email"
-                      {...register('email', { 
+                      {...register('email', {
                         required: 'Email is required',
                         pattern: {
                           value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -168,7 +171,7 @@ const Contact = () => {
                     )}
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-1">
@@ -182,7 +185,7 @@ const Contact = () => {
                       placeholder="Your Company"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-1">
                       Phone Number
@@ -196,10 +199,10 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-1">
-                    Subject <span className="text-indigo-400">*</span>
+                    Subject <span className="text-[#E2B478]">*</span>
                   </label>
                   <input
                     id="subject"
@@ -212,10 +215,10 @@ const Contact = () => {
                     <p className="mt-1 text-sm text-red-500">{errors.subject.message}</p>
                   )}
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
-                    Message <span className="text-indigo-400">*</span>
+                    Message <span className="text-[#E2B478]">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -228,7 +231,7 @@ const Contact = () => {
                     <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
                   )}
                 </div>
-                
+
                 <Button
                   type="submit"
                   variant="primary"
@@ -244,7 +247,7 @@ const Contact = () => {
           </motion.div>
         </div>
       </Section>
-      
+
       {/* Map Section */}
       <Section
         title="Visit Our Office"
@@ -252,20 +255,47 @@ const Contact = () => {
         centered
         className="bg-gray-950"
       >
-        <div className="mt-12 relative rounded-xl overflow-hidden h-[500px] shadow-xl shadow-indigo-900/10">
-          {/* Replace with actual map or iframe */}
-          <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
-            <div className="text-center px-4">
-              <MapPin className="h-16 w-16 text-indigo-500 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">Cloud Myanmar</h3>
-              <p className="text-gray-400 max-w-md mx-auto">
-                123 AI Avenue, Innovation District, Yangon, Myanmar
-              </p>
-            </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
+          <div className="relative rounded-xl overflow-hidden h-[500px] shadow-xl shadow-indigo-900/10">
+            {/* Replace with actual map or iframe */}
+            {/* <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
+              <div className="text-center px-4">
+                <MapPin className="h-16 w-16 text-[#E2B478] mx-auto mb-4" />
+                <h3 className="text-2xl font-bold mb-2">Cloud Myanmar</h3>
+                <p className="text-gray-400 max-w-md mx-auto">
+                  123 AI Avenue, Innovation District, Yangon, Myanmar
+                </p>
+              </div>
+            </div> */}
+
+            <iframe
+              title="Cloud Services Location"
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1674.6884894116372!2d96.13336877822645!3d16.801357883000243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb4d92b362af%3A0xbdad8f8eed2b10d6!2sSanchaung%20Garden%20Residence!5e1!3m2!1sen!2smm!4v1766567709118!5m2!1sen!2smm'
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: '300px' }}
+              allowFullScreen
+              loading="lazy"
+            />
+
+          </div>
+
+          <div className="relative rounded-xl overflow-hidden h-[500px] shadow-xl shadow-indigo-900/10">
+            {/* Replace with actual map or iframe */}
+            <iframe
+              title="Cloud Services Location"
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1674.6884894116372!2d96.13336877822645!3d16.801357883000243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb4d92b362af%3A0xbdad8f8eed2b10d6!2sSanchaung%20Garden%20Residence!5e1!3m2!1sen!2smm!4v1766567709118!5m2!1sen!2smm'
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: '300px' }}
+              allowFullScreen
+              loading="lazy"
+            />
           </div>
         </div>
+
       </Section>
-      
+
       {/* FAQ Section */}
       <Section
         title="Frequently Asked Questions"
@@ -312,7 +342,7 @@ const Contact = () => {
           </div>
         </div>
       </Section>
-      
+
       {/* CTA Section */}
       <Section className="bg-gray-950">
         <div className="max-w-3xl mx-auto text-center">
@@ -326,7 +356,7 @@ const Contact = () => {
             Ready to Start Your <br />
             <span className="gradient-text">AI Journey?</span>
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -336,15 +366,15 @@ const Contact = () => {
           >
             Contact us today for a free consultation and discover how AI can transform your business.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Button 
-              variant="primary" 
+            <Button
+              variant="primary"
               size="lg"
               icon={<Phone className="h-5 w-5" />}
               iconPosition="left"

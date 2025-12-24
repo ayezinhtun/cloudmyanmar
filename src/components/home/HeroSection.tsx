@@ -129,14 +129,14 @@ const HeroSection = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="w-64 h-64 rounded-full bg-indigo-900/20 backdrop-blur-md flex items-center justify-center border border-indigo-500/30 shadow-glow"
+              className="w-64 h-64 rounded-full bg-indigo-900/20 backdrop-blur-md flex items-center justify-center border border-[#ebcba2] shadow-glow"
             >
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1 }}
               >
-                <Cpu className="w-24 h-24 text-indigo-400" />
+                <Cpu className="w-24 h-24 text-[#E2B478]" />
               </motion.div>
             </motion.div>
             
@@ -146,7 +146,7 @@ const HeroSection = () => {
               animate="animate"
               className="absolute -top-10 left-20 p-4 bg-gray-800/80 backdrop-blur-sm rounded-lg border border-gray-700"
             >
-              <Brain className="w-10 h-10 text-purple-500" />
+              <Brain className="w-10 h-10 text-[#E2B478]" />
             </motion.div>
             
             <motion.div
@@ -155,7 +155,7 @@ const HeroSection = () => {
               transition={{ delay: 1 }}
               className="absolute top-20 -right-5 p-4 bg-gray-800/80 backdrop-blur-sm rounded-lg border border-gray-700"
             >
-              <Database className="w-10 h-10 text-indigo-500" />
+              <Database className="w-10 h-10 text-[#E2B478]" />
             </motion.div>
             
             {/* Connection lines */}
