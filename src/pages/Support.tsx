@@ -68,13 +68,16 @@ const Support = () => {
       title: "Phone Support",
       description: "Speak directly with our experts",
       icon: <Phone className="h-6 w-6" />,
-      action: "Call Now"
+      action: "Call Now",
+      href: "tel:+959880533295"
     },
     {
       title: "Email Support",
       description: "Send us your detailed inquiries",
       icon: <Mail className="h-6 w-6" />,
-      action: "Send Email"
+      action: "Send Email",
+      href: "mailto:xebek44986@mekuron.com?subject=Support Request"
+
     }
   ];
 
@@ -91,7 +94,7 @@ const Support = () => {
           >
             How Can We <span className="gradient-text">Help You?</span>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -100,7 +103,7 @@ const Support = () => {
           >
             Find answers, documentation, and expert support to help you get the most out of our AI solutions.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -136,9 +139,11 @@ const Support = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">{channel.title}</h3>
               <p className="text-gray-400 mb-6">{channel.description}</p>
-              <Button variant="primary">
-                {channel.action}
-              </Button>
+              <a href={channel.href}>
+                <Button variant="primary">
+                  {channel.action}
+                </Button>
+              </a>
             </Card>
           ))}
         </div>
@@ -215,7 +220,7 @@ const Support = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
-                  <Button 
+                  <Button
                     variant="primary"
                     size="lg"
                     icon={<ArrowRight className="h-5 w-5" />}
@@ -225,7 +230,7 @@ const Support = () => {
                   </Button>
                 </Link>
                 <Link to="/docs">
-                  <Button 
+                  <Button
                     variant="outline"
                     size="lg"
                   >
