@@ -118,7 +118,7 @@ const Home = () => {
       
       {/* About Section */}
       <Section
-        title="About Cloud Myanmar"
+        title="About Byte Matrix Myanmar"
         subtitle="We're a team of AI specialists dedicated to creating innovative solutions that drive digital transformation."
         centered
         className="bg-gray-950"
