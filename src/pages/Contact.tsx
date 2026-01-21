@@ -157,7 +157,7 @@ const Contact = () => {
                       type="text"
                       {...register('name', { required: 'Name is required' })}
                       className={`w-full px-4 py-2 bg-gray-700/50 border ${errors.name ? 'border-red-500' : 'border-gray-600'} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
-                      placeholder="John Doe"
+                      placeholder="Enter Name"
                     />
                     {errors.name && (
                       <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>
@@ -179,7 +179,7 @@ const Contact = () => {
                         }
                       })}
                       className={`w-full px-4 py-2 bg-gray-700/50 border ${errors.email ? 'border-red-500' : 'border-gray-600'} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
-                      placeholder="john@example.com"
+                      placeholder="Enter Email"
                     />
                     {errors.email && (
                       <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
@@ -210,7 +210,7 @@ const Contact = () => {
                       type="tel"
                       {...register('phone')}
                       className="w-full px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                      placeholder="+95 123 456 789"
+                      placeholder="Enter Phone Number"
                     />
                   </div>
                 </div>
@@ -284,7 +284,7 @@ const Contact = () => {
             </div> */}
 
             <iframe
-              title="Cloud Services Location"
+              title="Yangon Location"
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1674.6884894116372!2d96.13336877822645!3d16.801357883000243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb4d92b362af%3A0xbdad8f8eed2b10d6!2sSanchaung%20Garden%20Residence!5e1!3m2!1sen!2smm!4v1766567709118!5m2!1sen!2smm'
               width="100%"
               height="100%"
@@ -298,7 +298,7 @@ const Contact = () => {
           <div className="relative rounded-xl overflow-hidden h-[500px] shadow-xl shadow-indigo-900/10">
             {/* Replace with actual map or iframe */}
             <iframe
-              title="Cloud Services Location"
+              title="Naypyitaw Location"
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1674.6884894116372!2d96.13336877822645!3d16.801357883000243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb4d92b362af%3A0xbdad8f8eed2b10d6!2sSanchaung%20Garden%20Residence!5e1!3m2!1sen!2smm!4v1766567709118!5m2!1sen!2smm'
               width="100%"
               height="100%"

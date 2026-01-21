@@ -188,7 +188,7 @@ const Home = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <Link to="/services">
+          <Link to="/services#service">
             <Button
               variant="primary"
               icon={<ArrowRight className="h-5 w-5" />}
