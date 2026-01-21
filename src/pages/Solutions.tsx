@@ -3,9 +3,20 @@ import { ArrowRight, BookOpen, Brain, Briefcase, Building2, Camera, BarChart as 
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Solutions = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+  }, [hash]);
   const solutions = [
     {
       title: "Network Infrastructure",
@@ -296,6 +307,7 @@ const Solutions = () => {
 
       {/* Industries Section */}
       <Section
+        id='solution'
         title="Industries We Serve"
         subtitle="Reliable IT and network solutions for every industry"
         centered
