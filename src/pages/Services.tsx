@@ -1,11 +1,23 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Building, Cpu, Database, LineChart, MessageSquare, Server, Sparkles, BarChart2, Network, HardDrive, Shield, BookOpen, Zap } from 'lucide-react';
+import { ArrowRight, Brain, Building, Cpu, Database, LineChart, MessageSquare, Server, Sparkles, BarChart2, Network, HardDrive, Shield, BookOpen, Zap, LifeBuoy, Search } from 'lucide-react';
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Services = () => {
+  const {hash} = useLocation() ; 
+
+  useEffect(() => {
+    if(hash) {
+      const element = document.querySelector(hash); 
+      if(element) {
+        element.scrollIntoView({behavior: "smooth"})
+      }
+    }
+  }, [hash]);
+
   const services = [
     {
       title: "IT Infrastructure & System Integration Services",
@@ -81,35 +93,36 @@ const Services = () => {
   const processSteps = [
     {
       title: "Discovery",
-      description: "We learn about your business, challenges, and goals to identify how AI can create value.",
-      icon: <Brain className="h-6 w-6" />
+      description: "We analyze your business needs, IT environment, and infrastructure requirements.",
+      icon: <Search className="h-6 w-6" />
     },
     {
-      title: "Strategy",
-      description: "We develop a tailored implementation plan with clear milestones and expected outcomes.",
+      title: "Planning",
+      description: "We create a detailed IT and system integration plan with clear milestones.",
       icon: <LineChart className="h-6 w-6" />
     },
     {
-      title: "Development",
-      description: "Our team builds your custom AI solution using cutting-edge technologies and methodologies.",
+      title: "Design",
+      description: "Our engineers design robust IT, network, and cloud solutions tailored to your needs.",
       icon: <Cpu className="h-6 w-6" />
     },
     {
-      title: "Integration",
-      description: "We seamlessly integrate the AI solution into your existing systems and workflows.",
+      title: "Implementation",
+      description: "We deploy IT systems, networks, and infrastructure seamlessly into your operations.",
       icon: <Network className="h-6 w-6" />
     },
     {
-      title: "Deployment",
-      description: "Your solution goes live with comprehensive testing and quality assurance.",
+      title: "Testing & Deployment",
+      description: "Comprehensive testing ensures reliable performance before going live.",
       icon: <Server className="h-6 w-6" />
     },
     {
-      title: "Support",
-      description: "We provide ongoing maintenance, optimization, and support to ensure long-term success.",
-      icon: <Sparkles className="h-6 w-6" />
+      title: "Support & Maintenance",
+      description: "We provide ongoing support, monitoring, and optimization for long-term success.",
+      icon: <LifeBuoy className="h-6 w-6" />
     }
   ];
+
 
   return (
     <div className="pt-20">
@@ -122,57 +135,66 @@ const Services = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Our <span className="gradient-text">AI Services</span>
+              Our <span className="gradient-text">IT & SI Services</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Comprehensive AI solutions designed to transform your business operations, enhance decision-making, and drive innovation.
-            </p>
+              Comprehensive IT, cloud, and system integration solutions designed to optimize your operations, enhance security, and drive business efficiency.            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div className="flex items-start">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                 </div>
                 <div>
-                  <h4 className="font-medium">Customized Solutions</h4>
-                  <p className="text-gray-400 text-sm mt-1">Tailored to your specific business needs</p>
+                  <h4 className="font-medium">Customized IT Solutions</h4>
+                  <p className="text-gray-400 text-sm mt-1">Tailored infrastructure and system integration for your business</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                 </div>
                 <div>
                   <h4 className="font-medium">Expert Team</h4>
-                  <p className="text-gray-400 text-sm mt-1">Specialized AI developers and data scientists</p>
+                  <p className="text-gray-400 text-sm mt-1">Skilled engineers specializing in networks, cloud, and IT infrastructure</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                 </div>
                 <div>
                   <h4 className="font-medium">End-to-End Service</h4>
-                  <p className="text-gray-400 text-sm mt-1">From strategy to implementation and support</p>
+                  <p className="text-gray-400 text-sm mt-1">From planning and design to implementation and support</p>
                 </div>
               </div>
+
               <div className="flex items-start">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                 </div>
                 <div>
                   <h4 className="font-medium">Proven Results</h4>
-                  <p className="bg-gray-800/80 text-sm mt-1">Track record of successful implementations</p>
+                  <p className="text-gray-400 text-sm mt-1">Track record of successful IT and network implementations</p>
                 </div>
               </div>
+
             </div>
-            <Link to="/contact">
+            {/* <Link to="/contact">
               <Button
                 variant="primary"
                 size="lg"
               >
                 Discuss Your Project
               </Button>
-            </Link>
+            </Link> */}
           </motion.div>
 
           <motion.div
@@ -183,22 +205,23 @@ const Services = () => {
           >
             <img
               src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="AI Services"
+              alt="SI Services"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-6">
+            {/* <div className="absolute bottom-0 left-0 right-0 p-6">
               <h3 className="text-2xl font-bold mb-2">Innovative AI Solutions</h3>
               <p className="text-gray-300">Powering the future of business in Myanmar</p>
-            </div>
+            </div> */}
           </motion.div>
         </div>
-      </Section>
+      </Section >
 
       {/* Our Services Section */}
       <Section
+        id='service'
         title="Our Services"
-        subtitle="Comprehensive AI solutions to address your business challenges"
+        subtitle="Comprehensive IT, cloud, and system integration solutions to meet your business needs"
         centered
         className="bg-gray-950"
       >
@@ -222,19 +245,18 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              <Link to="/contact" className="text-[#E2B478] hover:text-[#ebcba2] inline-flex items-center">
+              {/* <Link to="/contact" className="text-[#E2B478] hover:text-[#ebcba2] inline-flex items-center">
                 Learn more <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </Link> */}
             </Card>
           ))}
         </div>
-      </Section>
+      </Section >
 
       {/* Our Process Section */}
       <Section
         title="Our Process"
-        subtitle="A structured approach to implementing AI solutions for your business"
-        centered
+        subtitle="A structured approach to delivering IT, cloud, and system integration solutions" centered
         className="bg-gradient-to-b from-gray-950 to-gray-900"
       >
         <div className="mt-16 relative">
@@ -287,25 +309,26 @@ const Services = () => {
             ))}
           </div>
         </div>
-      </Section>
+      </Section >
 
       {/* Technologies Section */}
       <Section
+        id='technology'
         title="Technologies We Use"
-        subtitle="Cutting-edge tools and frameworks to build powerful AI solutions"
+        subtitle="Enterprise-grade platforms and technologies powering our system integration solutions"
         centered
         className="bg-gray-900"
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
           {[
-            { name: "TensorFlow", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png" },
-            { name: "PyTorch", icon: "https://pytorch.org/assets/images/pytorch-logo.png" },
-            { name: "Scikit-Learn", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png" },
-            { name: "Keras", icon: "https://keras.io/img/logo.png" },
-            { name: "Python", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" },
-            { name: "R", icon: "https://www.r-project.org/logo/Rlogo.png" },
-            { name: "AWS", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png" },
-            { name: "Google Cloud", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Google_Cloud_logo.svg/1200px-Google_Cloud_logo.svg.png" },
+            { name: "Cisco", icon: "https://cdn.simpleicons.org/cisco/ffffff" },
+            { name: "Fortinet", icon: "https://cdn.simpleicons.org/fortinet/ffffff" },
+            { name: "VMware", icon: "https://cdn.simpleicons.org/vmware/ffffff" },
+            { name: "Microsoft Azure", icon: "https://cdn.simpleicons.org/microsoftazure/ffffff" },
+            { name: "Linux", icon: "https://cdn.simpleicons.org/linux/ffffff" },
+            { name: "Dell EMC", icon: "https://cdn.simpleicons.org/dell/ffffff" },
+            { name: "AWS", icon: "https://cdn.simpleicons.org/amazonaws/ffffff" },
+            { name: "Oracle", icon: "https://cdn.simpleicons.org/oracle/ffffff" },
           ].map((tech, index) => (
             <motion.div
               key={index}
@@ -324,13 +347,12 @@ const Services = () => {
             </motion.div>
           ))}
         </div>
-      </Section>
+      </Section >
 
       {/* Why Choose Us Section */}
       <Section
         title="Why Choose Us"
-        subtitle="What sets Cloud Myanmar apart as your AI solutions partner"
-        className="bg-gradient-to-b from-gray-900 to-gray-950"
+        subtitle="What sets us apart as your trusted system integration partner" className="bg-gradient-to-b from-gray-900 to-gray-950"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
           <motion.div
@@ -347,8 +369,8 @@ const Services = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
             <div className="absolute bottom-0 left-0 right-0 p-6">
-              <h3 className="text-2xl font-bold mb-2">Expert Team</h3>
-              <p className="text-gray-300">Specialists in AI and machine learning</p>
+              <h3 className="text-2xl font-bold mb-2">Expert Engineering Team</h3>
+              <p className="text-gray-300">Specialists in IT infrastructure, networking, and cloud solutions</p>
             </div>
           </motion.div>
 
@@ -366,7 +388,9 @@ const Services = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium mb-2">Local Expertise, Global Standards</h4>
-                  <p className="text-gray-400">We combine deep knowledge of the Myanmar market with international best practices in AI development.</p>
+                  <p className="text-gray-400">  We combine deep understanding of the Myanmar market with internationally
+                    recognized IT and system integration best practices.
+                  </p>
                 </div>
               </li>
               <li className="flex items-start">
@@ -374,8 +398,9 @@ const Services = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
                 <div>
-                  <h4 className="text-lg font-medium mb-2">Results-Driven Approach</h4>
-                  <p className="text-gray-400">We focus on delivering measurable business outcomes and ROI from your AI investments.</p>
+                  <h4 className="text-lg font-medium mb-2"> Proven Project Experience</h4>
+                  <p className="text-gray-400">Extensive experience delivering large-scale telecom, government, and
+                    enterprise IT projects successfully.</p>
                 </div>
               </li>
               <li className="flex items-start">
@@ -383,8 +408,9 @@ const Services = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
                 <div>
-                  <h4 className="text-lg font-medium mb-2">Customized Solutions</h4>
-                  <p className="text-gray-400">No one-size-fits-all approaches – we tailor our solutions to your specific business challenges.</p>
+                  <h4 className="text-lg font-medium mb-2"> Tailored Infrastructure Solutions</h4>
+                  <p className="text-gray-400">We design and implement solutions based on your actual business,
+                    operational, and technical requirements.</p>
                 </div>
               </li>
               <li className="flex items-start">
@@ -392,17 +418,19 @@ const Services = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
                 <div>
-                  <h4 className="text-lg font-medium mb-2">Transparent Collaboration</h4>
-                  <p className="text-gray-400">We maintain clear communication and involve you throughout the development process.</p>
+                  <h4 className="text-lg font-medium mb-2">Transparent & Reliable Partnership</h4>
+                  <p className="text-gray-400">  Clear communication, structured delivery, and long-term support you can
+                    rely on.
+                  </p>
                 </div>
               </li>
             </ul>
           </motion.div>
         </div>
-      </Section>
+      </Section >
 
       {/* CTA Section */}
-      <Section className="bg-gray-950">
+      {/* <Section className="bg-gray-950" >
         <div className="max-w-3xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -450,8 +478,8 @@ const Services = () => {
             </Link>
           </motion.div>
         </div>
-      </Section>
-    </div>
+      </Section > */}
+    </div >
   );
 };
 

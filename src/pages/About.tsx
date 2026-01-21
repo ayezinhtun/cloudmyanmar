@@ -34,20 +34,45 @@ const About = () => {
   // ];
 
   const values = [
-    { title: "Innovation", icon: <Lightbulb className="h-8 w-8 text-[#E2B478]" />, description: "We constantly push the boundaries of what's possible with AI" },
-    { title: "Excellence", icon: <Star className="h-8 w-8 text-[#E2B478]" />, description: "We strive for the highest quality in everything we do" },
-    { title: "Integrity", icon: <Shield className="h-8 w-8 text-[#E2B478]" />, description: "We operate with transparency and ethical responsibility" },
-    { title: "Collaboration", icon: <Users className="h-8 w-8 text-[#E2B478]" />, description: "We work closely with clients to ensure their success" },
-    { title: "Passion", icon: <Heart className="h-8 w-8 text-[#E2B478]" />, description: "We're driven by our love for technology and its potential" },
-    { title: "Impact", icon: <Target className="h-8 w-8 text-[#E2B478]" />, description: "We aim to make a meaningful difference for our clients" },
+    {
+      title: "Innovation",
+      icon: <Lightbulb className="h-8 w-8 text-[#E2B478]" />,
+      description: "We constantly explore new IT, networking, and system integration solutions to meet evolving business needs."
+    },
+    {
+      title: "Excellence",
+      icon: <Star className="h-8 w-8 text-[#E2B478]" />,
+      description: "We deliver the highest quality in IT infrastructure, cloud, and network projects."
+    },
+    {
+      title: "Integrity",
+      icon: <Shield className="h-8 w-8 text-[#E2B478]" />,
+      description: "We operate with transparency, ethical responsibility, and professionalism in every project."
+    },
+    {
+      title: "Collaboration",
+      icon: <Users className="h-8 w-8 text-[#E2B478]" />,
+      description: "We work closely with clients and partners to ensure seamless system integration and IT success."
+    },
+    {
+      title: "Reliability",
+      icon: <Heart className="h-8 w-8 text-[#E2B478]" />,
+      description: "We provide dependable IT solutions that businesses can trust for mission-critical operations."
+    },
+    {
+      title: "Impact",
+      icon: <Target className="h-8 w-8 text-[#E2B478]" />,
+      description: "We aim to create meaningful improvements in our clients’ IT and business operations."
+    }
   ];
 
-  const achievements = [
-    { count: "150+", label: "Clients Served" },
-    { count: "50+", label: "AI Projects" },
-    { count: "25+", label: "Industry Awards" },
-    { count: "10+", label: "Years Experience" },
-  ];
+
+  // const achievements = [
+  //   { count: "150+", label: "Clients Served" },
+  //   { count: "50+", label: "AI Projects" },
+  //   { count: "25+", label: "Industry Awards" },
+  //   { count: "10+", label: "Years Experience" },
+  // ];
 
   return (
     <div className="pt-20">
@@ -60,11 +85,10 @@ const About = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              About <span className="gradient-text">Cloud Myanmar</span>
+              About <span className="gradient-text">Byte Matrix Myanmar</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              We are a leading AI solutions provider dedicated to helping businesses in Myanmar embrace the digital future through innovative technology.
-            </p>
+              We are a leading System Integrator in Myanmar, delivering innovative IT, cloud, and network solutions that empower businesses to operate efficiently and securely.            </p>
             <div className="flex flex-wrap gap-4 mb-8">
               <div className="flex items-center">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
@@ -78,15 +102,15 @@ const About = () => {
                 </div>
                 <span>Based in Yangon</span>
               </div>
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Check className="h-5 w-5" />
                 </div>
-                <span>25+ AI Specialists</span>
-              </div>
+                <span>25+ Specialists</span>
+              </div> */}
             </div>
-            <Link to="/contact">
-              <Button 
+            <Link to="/contact#contacts">
+              <Button
                 variant="primary"
                 size="lg"
               >
@@ -94,31 +118,31 @@ const About = () => {
               </Button>
             </Link>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative rounded-xl overflow-hidden shadow-2xl shadow-indigo-900/20"
           >
-            <img 
-              src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-              alt="Byte Matrix Myanmar Team" 
+            <img
+              src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Byte Matrix Myanmar Team"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-6">
+            {/* <div className="absolute bottom-0 left-0 right-0 p-6">
               <h3 className="text-2xl font-bold mb-2">Our Story</h3>
               <p className="text-gray-300">Pioneering AI innovation in Myanmar since 2015</p>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </Section>
-      
+
       {/* Mission & Vision Section */}
       <Section
         title="Our Mission & Vision"
-        subtitle="Driving digital transformation through innovative AI solutions"
+        subtitle=""
         centered
         className="bg-gray-950"
       >
@@ -129,30 +153,31 @@ const About = () => {
             </div>
             <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
             <p className="text-gray-400 mb-4">
-              To empower businesses in Myanmar with cutting-edge AI solutions that drive growth, innovation, and competitive advantage in the digital age.
+              Helping customers to accelerate the business ambitions by delivering innovative IT solutions and consistent quality services at all time.
+            </p>
+            <p className="text-gray-400 mb-4">
+              Striving to exceed customers’ expectations to become selected vendor, then to become  preferred vendor.
             </p>
             <p className="text-gray-400">
-              We are committed to bridging the technology gap and making advanced AI accessible to organizations of all sizes, contributing to Myanmar's digital economy.
+              Being the partner of choice for a leading system integrator, build and maintain the most innovative, reliable and cost-effective solution.
             </p>
           </Card>
-          
+
           <Card className="p-8">
             <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#DBE278]/5 text-[#DBE278] ">
               <Brain className="h-8 w-8" />
             </div>
             <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
             <p className="text-gray-400 mb-4">
-              To be the leading AI solutions provider in Myanmar, pioneering the digital transformation journey and setting new standards of excellence in technology innovation.
+              To achieve year to year sustainable growth through wide portfolio of innovation, customer focused products and services efficiently delivered by a professional and resourceful team through active communication.
             </p>
-            <p className="text-gray-400">
-              We envision a future where every business in Myanmar leverages AI to enhance their operations, serve their customers better, and contribute to national development.
-            </p>
+
           </Card>
         </div>
       </Section>
-      
+
       {/* Our Story Section */}
-      <Section
+      {/* <Section
         title="Our Story"
         subtitle="From a small startup to Myanmar's leading AI solutions provider"
         className=""
@@ -178,7 +203,7 @@ const About = () => {
                 Today, we're proud to be at the forefront of Myanmar's digital transformation, helping businesses harness the power of AI to overcome challenges, seize opportunities, and thrive in an increasingly competitive landscape.
               </p>
             </motion.div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
               {achievements.map((item, index) => (
                 <motion.div
@@ -195,7 +220,7 @@ const About = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="lg:col-span-2">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -204,9 +229,9 @@ const About = () => {
               transition={{ duration: 0.5 }}
               className="relative rounded-xl overflow-hidden h-full min-h-[300px]"
             >
-              <img 
-                src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                alt="Byte Matrix Myanmar Journey" 
+              <img
+                src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Byte Matrix Myanmar Journey"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent flex flex-col justify-end p-6">
@@ -219,14 +244,13 @@ const About = () => {
             </motion.div>
           </div>
         </div>
-      </Section>
-      
+      </Section> */}
+
       {/* Our Values Section */}
       <Section
         title="Our Values"
-        subtitle="The principles that guide everything we do"
-        centered
-        className="bg-gray-900"
+        subtitle="Core principles that drive our system integration, IT, and networking services." centered
+        className=""
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {values.map((value, index) => (
@@ -240,7 +264,7 @@ const About = () => {
           ))}
         </div>
       </Section>
-      
+
       {/* Our Team Section */}
       {/* <Section
         title="Meet Our Leadership Team"
@@ -268,7 +292,7 @@ const About = () => {
           ))}
         </div>
       </Section> */}
-      
+
       {/* Awards Section */}
       {/* <Section
         title="Awards & Recognition"
@@ -302,9 +326,9 @@ const About = () => {
           </Card>
         </div>
       </Section> */}
-      
+
       {/* CTA Section */}
-      <Section className="">
+      {/* <Section className="">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -316,7 +340,7 @@ const About = () => {
             Ready to Partner With <br />
             <span className="gradient-text">Myanmar's AI Leaders?</span>
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -326,7 +350,7 @@ const About = () => {
           >
             Join the many businesses that have transformed their operations with our innovative AI solutions.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -335,16 +359,16 @@ const About = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link to="/contact">
-              <Button 
-                variant="primary" 
+              <Button
+                variant="primary"
                 size="lg"
               >
                 Contact Us
               </Button>
             </Link>
             <Link to="/services">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 size="lg"
               >
                 View Our Services
@@ -352,7 +376,7 @@ const About = () => {
             </Link>
           </motion.div>
         </div>
-      </Section>
+      </Section> */}
     </div>
   );
 };

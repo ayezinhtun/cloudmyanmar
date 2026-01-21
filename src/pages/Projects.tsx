@@ -1,91 +1,145 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Code, Database, Globe, LineChart } from 'lucide-react';
+import { ArrowRight, Brain, Code, Cpu, Database, Globe, LineChart, Server } from 'lucide-react';
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 
 const Projects = () => {
+  // const projects = [
+  //   {
+  //     title: "Healthcare AI Assistant",
+  //     client: "Myanmar General Hospital",
+  //     description: "AI-powered diagnostic assistance system for medical professionals",
+  //     image: "https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg",
+  //     category: "Healthcare",
+  //     technologies: ["TensorFlow", "Python", "React"],
+  //     outcomes: [
+  //       "30% faster diagnosis time",
+  //       "95% accuracy rate",
+  //       "Improved patient care"
+  //     ]
+  //   },
+  //   {
+  //     title: "Financial Fraud Detection",
+  //     client: "Myanmar Banking Group",
+  //     description: "Real-time fraud detection system using machine learning",
+  //     image: "https://images.pexels.com/photos/7567529/pexels-photo-7567529.jpeg",
+  //     category: "Finance",
+  //     technologies: ["PyTorch", "Python", "Node.js"],
+  //     outcomes: [
+  //       "90% fraud detection rate",
+  //       "50% reduction in false positives",
+  //       "$2M saved annually"
+  //     ]
+  //   },
+  //   {
+  //     title: "Smart Inventory Management",
+  //     client: "Myanmar Retail Chain",
+  //     description: "AI-driven inventory optimization system",
+  //     image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg",
+  //     category: "Retail",
+  //     technologies: ["Scikit-learn", "Python", "React"],
+  //     outcomes: [
+  //       "25% reduction in stockouts",
+  //       "20% inventory cost reduction",
+  //       "Improved supply chain efficiency"
+  //     ]
+  //   },
+  //   {
+  //     title: "Manufacturing Quality Control",
+  //     client: "Myanmar Manufacturing Co.",
+  //     description: "Computer vision system for quality assurance",
+  //     image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg",
+  //     category: "Manufacturing",
+  //     technologies: ["OpenCV", "TensorFlow", "Python"],
+  //     outcomes: [
+  //       "99% defect detection rate",
+  //       "40% reduction in manual inspection",
+  //       "Improved product quality"
+  //     ]
+  //   },
+  //   {
+  //     title: "Agricultural Yield Prediction",
+  //     client: "Myanmar Agri-Tech",
+  //     description: "ML-based crop yield prediction system",
+  //     image: "https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg",
+  //     category: "Agriculture",
+  //     technologies: ["Python", "TensorFlow", "React"],
+  //     outcomes: [
+  //       "85% prediction accuracy",
+  //       "20% increase in crop yield",
+  //       "Optimized resource usage"
+  //     ]
+  //   },
+  //   {
+  //     title: "Education Analytics Platform",
+  //     client: "Myanmar Education Network",
+  //     description: "Learning analytics and student performance prediction",
+  //     image: "https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg",
+  //     category: "Education",
+  //     technologies: ["Python", "React", "Node.js"],
+  //     outcomes: [
+  //       "15% improvement in student performance",
+  //       "Personalized learning paths",
+  //       "Enhanced teaching efficiency"
+  //     ]
+  //   }
+  // ];
+
   const projects = [
     {
-      title: "Healthcare AI Assistant",
-      client: "Myanmar General Hospital",
-      description: "AI-powered diagnostic assistance system for medical professionals",
-      image: "https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg",
-      category: "Healthcare",
-      technologies: ["TensorFlow", "Python", "React"],
-      outcomes: [
-        "30% faster diagnosis time",
-        "95% accuracy rate",
-        "Improved patient care"
+      name: "Network Cable Installation and Cabling Project",
+      client: "ITCSD, E-Government Department",
+      year: 2020,
+
+      scope: [
+        "Deploy the network installation to get fully redundant",
+        "Perform UTP CAT6 Cable Laying and Cable Structure",
+        "Ethernet Cable Patching in Cable Rack and Migration activity",
+        "Provide requirement documents (Ethernet Cable Points testing, Layout Design, detailed dimensions)"
       ]
     },
     {
-      title: "Financial Fraud Detection",
-      client: "Myanmar Banking Group",
-      description: "Real-time fraud detection system using machine learning",
-      image: "https://images.pexels.com/photos/7567529/pexels-photo-7567529.jpeg",
-      category: "Finance",
-      technologies: ["PyTorch", "Python", "Node.js"],
-      outcomes: [
-        "90% fraud detection rate",
-        "50% reduction in false positives",
-        "$2M saved annually"
+      name: "Secondary Core Switch and Access Switches Configuration Project",
+      client: "ITCSD, E-Government Department",
+      year: 2020,
+
+      scope: [
+        "Deploy the network installation to get fully redundant",
+        "Perform UTP CAT6 Cable Laying and Cable Structure",
+        "Ethernet Cable Patching in Cable Rack and Migration activity",
+        "Provide requirement documents (Ethernet Cable Points testing, Layout Design, detailed dimensions)"
       ]
     },
     {
-      title: "Smart Inventory Management",
-      client: "Myanmar Retail Chain",
-      description: "AI-driven inventory optimization system",
-      image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg",
-      category: "Retail",
-      technologies: ["Scikit-learn", "Python", "React"],
-      outcomes: [
-        "25% reduction in stockouts",
-        "20% inventory cost reduction",
-        "Improved supply chain efficiency"
+      name: "Redundant Mail Security System",
+      client: "ITCSD, E-Government Department",
+      year: 2021,
+
+      scope: [
+        "Forti Mail 400F",
+        "Cisco N3K Switch",
+        "10G network cards to get the redundant mail security system",
+        "Solution, Installation, Configuration, Documentation, Training, Operation and maintenance"
       ]
     },
+
     {
-      title: "Manufacturing Quality Control",
-      client: "Myanmar Manufacturing Co.",
-      description: "Computer vision system for quality assurance",
-      image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg",
-      category: "Manufacturing",
-      technologies: ["OpenCV", "TensorFlow", "Python"],
-      outcomes: [
-        "99% defect detection rate",
-        "40% reduction in manual inspection",
-        "Improved product quality"
+      name: "Organization Wildcard SSL Service Project",
+      client: "YCDC (Yangon City Development Committee)",
+      year: 2020,
+
+      scope: [
+        "Generate CSR file",
+        "Apply SSL renewal process",
+        "Run SSL validation via DNS",
+        "Generate new SSL certificate and key file"
       ]
     },
-    {
-      title: "Agricultural Yield Prediction",
-      client: "Myanmar Agri-Tech",
-      description: "ML-based crop yield prediction system",
-      image: "https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg",
-      category: "Agriculture",
-      technologies: ["Python", "TensorFlow", "React"],
-      outcomes: [
-        "85% prediction accuracy",
-        "20% increase in crop yield",
-        "Optimized resource usage"
-      ]
-    },
-    {
-      title: "Education Analytics Platform",
-      client: "Myanmar Education Network",
-      description: "Learning analytics and student performance prediction",
-      image: "https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg",
-      category: "Education",
-      technologies: ["Python", "React", "Node.js"],
-      outcomes: [
-        "15% improvement in student performance",
-        "Personalized learning paths",
-        "Enhanced teaching efficiency"
-      ]
-    }
+
   ];
+
 
   return (
     <div className="pt-20">
@@ -101,14 +155,13 @@ const Projects = () => {
               Our Success <span className="gradient-text">Stories</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Explore our portfolio of successful AI implementations across various industries in Myanmar.
-            </p>
+              Explore our portfolio of successful IT and network projects delivered across various sectors in Myanmar.            </p>
             <div className="flex flex-wrap gap-4 mb-8">
               <div className="flex items-center">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
-                  <Brain className="h-5 w-5" />
+                  <Server className="h-5 w-5" />
                 </div>
-                <span>AI Excellence</span>
+                <span>Network Excellence</span>
               </div>
               <div className="flex items-center">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
@@ -118,9 +171,9 @@ const Projects = () => {
               </div>
               <div className="flex items-center">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
-                  <Database className="h-5 w-5" />
+                  <Cpu className="h-5 w-5" />
                 </div>
-                <span>Data-Driven</span>
+                <span>Infrastructure</span>
               </div>
               <div className="flex items-center">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
@@ -130,7 +183,7 @@ const Projects = () => {
               </div>
             </div>
             <Link to="/contact">
-              <Button 
+              <Button
                 variant="primary"
                 size="lg"
                 icon={<ArrowRight className="h-5 w-5" />}
@@ -140,29 +193,73 @@ const Projects = () => {
               </Button>
             </Link>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative rounded-xl overflow-hidden shadow-2xl shadow-indigo-900/20"
           >
-            <img 
+            <img
               src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
-              alt="AI Projects"
+              alt="SI Projects"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-6">
+            {/* <div className="absolute bottom-0 left-0 right-0 p-6">
               <h3 className="text-2xl font-bold mb-2">Innovative Solutions</h3>
               <p className="text-gray-300">Transforming businesses across Myanmar</p>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </Section>
 
-      {/* Projects Grid */}
       <Section
+        title="Our Projects"
+        subtitle="End-to-end IT and network solutions delivered to clients"
+        centered
+        className="bg-gray-950"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          {projects.map((project, index) => (
+            <Card key={index} className="p-8">
+
+              <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+              <p className="text-gray-400 mb-4">
+                <span className="font-medium">Client:</span> {project.client} <br />
+                <span className="font-medium">Year:</span> {project.year}
+              </p>
+              <ul className="space-y-2 mb-6">
+                {project.scope.map((item, idx) => (
+                  <li key={idx} className="flex items-center text-gray-300">
+                    <div className="mr-2 text-[#E2B478]">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              {/* Optional link if needed */}
+              {/* <Link to="/contact" className="text-[#E2B478] hover:text-[#ebcba2] inline-flex items-center">
+          Learn more <ArrowRight className="ml-2 h-4 w-4" />
+        </Link> */}
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+
+      {/* Projects Grid */}
+      {/* <Section
         title="Featured Projects"
         subtitle="Discover how we've helped businesses across Myanmar transform with AI"
         centered
@@ -210,10 +307,10 @@ const Projects = () => {
             </Card>
           ))}
         </div>
-      </Section>
+      </Section> */}
 
       {/* CTA Section */}
-      <Section className="bg-gradient-to-t from-gray-950 to-gray-900">
+      {/* <Section className="bg-gradient-to-t from-gray-950 to-gray-900">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -261,7 +358,7 @@ const Projects = () => {
             </Link>
           </motion.div>
         </div>
-      </Section>
+      </Section> */}
     </div>
   );
 };

@@ -74,7 +74,7 @@ const Auth = () => {
               <p className="text-gray-400 mt-2">
                 {isSignIn 
                   ? 'Sign in to access your Cloud Myanmar account' 
-                  : 'Join Cloud Myanmar and experience the future of AI'}
+                  : 'Join Cloud Myanmar and experience the future of SI'}
               </p>
             </div>
             

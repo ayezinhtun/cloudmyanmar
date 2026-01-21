@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Cpu, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Cpu, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Youtube } from 'lucide-react';
 import logo from '../../assets/logo.png';
 
 const Footer = () => {
@@ -20,17 +20,14 @@ const Footer = () => {
               <img src={logo} className='h-10 w-24 object-cover' alt="" />
             </Link>
             <p className="text-gray-400 mb-4">
-              Leading provider of AI solutions and services in Myanmar, helping businesses transform with cutting-edge technology.
+              Delivering innovative IT solutions and enterprise-grade technologies to empower businesses in Myanmar and beyond.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-[#E2B478]  transition-colors" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-[#E2B478]  transition-colors" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-[#E2B478]  transition-colors" aria-label="Instagram">
-                <Instagram className="h-5 w-5" />
+                <Youtube className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-[#E2B478]  transition-colors" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
@@ -90,7 +87,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-start">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; {currentYear} Cloud Myanmar. All rights reserved.
+            &copy; {currentYear} Byte Matrix Myanmar. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <Link to="/privacy" className="text-gray-500 text-sm hover:text-indigo-400 transition-colors">

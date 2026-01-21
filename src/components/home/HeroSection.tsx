@@ -87,21 +87,20 @@ const HeroSection = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
             >
               Transforming Business <br/>
-              <span className="gradient-text">With AI Solutions</span>
+              <span className="gradient-text">With IT Solutions</span>
             </motion.h1>
             
             <motion.p 
               variants={itemVariants}
               className="text-xl text-gray-300 mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              Cloud Myanmar is the leading provider of cutting-edge AI systems and solutions to empower your business in the digital age.
-            </motion.p>
+ Delivering seamless IT infrastructure, networking, and system integration solutions to empower businesses across Myanmar.            </motion.p>
             
             <motion.div 
               variants={itemVariants}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Link to="/services">
+              <Link to="/services#service">
                 <Button 
                   variant="primary" 
                   size="lg"

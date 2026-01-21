@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Building2, BarChart as ChartBar, Cloud, Code2, Database, Factory, FileText, HeartPulse, LineChart, ShieldCheck, ShoppingBag } from 'lucide-react';
+import { ArrowRight, BookOpen, Brain, Briefcase, Building2, Camera, BarChart as ChartBar, Cloud, Code2, Cpu, Database, Factory, FileText, Globe, HeartPulse, Home, LineChart, Server, ShieldCheck, ShoppingBag, Truck } from 'lucide-react';
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -8,138 +8,182 @@ import { Link } from 'react-router-dom';
 const Solutions = () => {
   const solutions = [
     {
-      title: "Healthcare AI",
-      description: "Advanced AI solutions for healthcare providers and medical institutions",
-      icon: <HeartPulse className="h-10 w-10 text-[#E2B478]" />,
+      title: "Network Infrastructure",
+      description: "Design, implementation, and maintenance of enterprise and government networks",
+      icon: <Server className="h-10 w-10 text-[#E2B478]" />,
       features: [
-        "Medical image analysis",
-        "Patient data analytics",
-        "Treatment optimization",
-        "Resource management"
+        "Core & branch network deployment",
+        "Firewall & VPN setup",
+        "Router & switch configuration",
+        "WAN & LAN optimization"
       ]
     },
     {
-      title: "Financial Analytics",
-      description: "AI-powered financial analysis and risk management solutions",
-      icon: <LineChart className="h-10 w-10 text-[#DBE278]" />,
+      title: "Data Center Solutions",
+      description: "Comprehensive data center setup, migration, and operations",
+      icon: <Database className="h-10 w-10 text-[#DBE278]" />,
       features: [
-        "Risk assessment",
-        "Fraud detection",
-        "Market analysis",
-        "Investment optimization"
+        "Turnkey data center implementation",
+        "VMware & cloud virtualization",
+        "High availability & redundancy",
+        "Disaster recovery setup"
       ]
     },
     {
-      title: "Manufacturing Intelligence",
-      description: "Smart manufacturing solutions for Industry 4.0",
-      icon: <Factory className="h-10 w-10 text-[#E2B478]" />,
+      title: "Cloud & Managed Services",
+      description: "Cloud migration, management, and scalable IT solutions",
+      icon: <Cloud className="h-10 w-10 text-[#E2B478]" />,
       features: [
-        "Predictive maintenance",
-        "Quality control",
-        "Process optimization",
-        "Supply chain management"
+        "Public & private cloud solutions",
+        "Hybrid cloud integration",
+        "Serverless and scalable infrastructure",
+        "Managed IT support & monitoring"
       ]
     },
     {
-      title: "Retail Analytics",
-      description: "AI solutions for modern retail businesses",
-      icon: <ShoppingBag className="h-10 w-10 text-[#DBE278]" />,
+      title: "Cybersecurity & Compliance",
+      description: "Protecting enterprise networks and ensuring regulatory compliance",
+      icon: <ShieldCheck className="h-10 w-10 text-[#DBE278]" />,
       features: [
-        "Customer behavior analysis",
-        "Inventory optimization",
-        "Price optimization",
-        "Demand forecasting"
+        "Firewall & endpoint security",
+        "Vulnerability scanning",
+        "Compliance & risk management",
+        "DDoS & threat protection"
       ]
     },
     {
-      title: "Document Intelligence",
-      description: "Automated document processing and analysis",
-      icon: <FileText className="h-10 w-10 text-[#E2B478]" />,
+      title: "IT Infrastructure Upgrade",
+      description: "Upgrading legacy systems and optimizing enterprise IT environments",
+      icon: <Cpu className="h-10 w-10 text-[#E2B478]" />,
       features: [
-        "Text extraction",
-        "Document classification",
-        "Data validation",
-        "Workflow automation"
+        "EOL device replacement",
+        "Server & storage upgrades",
+        "Network optimization",
+        "Performance monitoring"
       ]
     },
     {
-      title: "Cloud Solutions",
-      description: "Cloud-native AI infrastructure and services",
-      icon: <Cloud className="h-10 w-10 text-[#DBE278]" />,
+      title: "Security & Surveillance Solutions",
+      description: "Deployment of CCTV, access control, and monitoring systems",
+      icon: <Camera className="h-10 w-10 text-[#DBE278]" />,
       features: [
-        "Cloud migration",
-        "Scalable infrastructure",
-        "Serverless computing",
-        "DevOps automation"
+        "CCTV installation & monitoring",
+        "Secure local network setup",
+        "Access control systems",
+        "Government & enterprise compliance"
       ]
     }
   ];
+
 
   const industries = [
     {
-      name: "Healthcare",
-      icon: <HeartPulse className="h-6 w-6" />,
+      name: "Telecommunications & Networking",
+      icon: <Server className="h-6 w-6" />,
       solutions: [
-        "Medical imaging analysis",
-        "Patient risk prediction",
-        "Clinical trial optimization",
-        "Healthcare resource management"
+        "Core & branch network deployment",
+        "Firewall & VPN setup",
+        "Router & switch configuration",
+        "WAN & LAN optimization"
       ]
     },
     {
-      name: "Finance",
-      icon: <ChartBar className="h-6 w-6" />,
+      name: "Government & Public Sector",
+      icon: <Globe className="h-6 w-6" />,
       solutions: [
-        "Fraud detection",
-        "Risk assessment",
-        "Algorithmic trading",
-        "Customer segmentation"
+        "E-Government network upgrades",
+        "Datacenter setup & DR implementation",
+        "Email & communication system expansion",
+        "Compliance & risk management"
       ]
     },
     {
-      name: "Manufacturing",
-      icon: <Factory className="h-6 w-6" />,
+      name: "Enterprise IT & Corporate Infrastructure",
+      icon: <Cpu className="h-6 w-6" />,
       solutions: [
-        "Predictive maintenance",
-        "Quality control",
-        "Supply chain optimization",
-        "Production planning"
+        "Data center virtualization (VMware, Azure)",
+        "Cloud migration & management",
+        "Server & storage upgrades",
+        "End-to-end IT support"
       ]
     },
     {
-      name: "Retail",
-      icon: <ShoppingBag className="h-6 w-6" />,
+      name: "Security & Surveillance",
+      icon: <ShieldCheck className="h-6 w-6" />,
       solutions: [
-        "Customer analytics",
-        "Inventory management",
-        "Price optimization",
-        "Demand forecasting"
+        "Firewall & endpoint protection",
+        "Vulnerability scanning",
+        "CCTV & monitoring systems",
+        "DDoS & threat protection"
+      ]
+    },
+    {
+      name: "Cloud & Virtualization Solutions",
+      icon: <Cloud className="h-6 w-6" />,
+      solutions: [
+        "Cloud migration & deployment",
+        "Virtual machines & containerization",
+        "Serverless infrastructure",
+        "DevOps & automation"
+      ]
+    },
+    {
+      name: "Data Center & IT Operations",
+      icon: <Database className="h-6 w-6" />,
+      solutions: [
+        "Datacenter setup & management",
+        "Backup & disaster recovery",
+        "Monitoring & optimization",
+        "Hardware & network support"
+      ]
+    },
+    {
+      name: "Corporate & Enterprise Services",
+      icon: <Briefcase className="h-6 w-6" />,
+      solutions: [
+        "IT consulting & project management",
+        "Enterprise software deployment",
+        "Collaboration & communication systems",
+        "End-user support"
+      ]
+    },
+    {
+      name: "Infrastructure & Logistics Support",
+      icon: <Truck className="h-6 w-6" />,
+      solutions: [
+        "Network connectivity for offices & warehouses",
+        "Server & cloud support",
+        "VPN & secure communications",
+        "Data tracking systems"
       ]
     }
   ];
 
+
+
   const features = [
     {
-      title: "Scalable Architecture",
-      description: "Our solutions are built to grow with your business",
+      title: "Scalable Infrastructure",
+      description: "IT solutions designed to grow with your organization, from branch networks to data centers.",
       icon: <Building2 className="h-6 w-6 text-[#E2B478]" />
     },
     {
-      title: "Data Security",
-      description: "Enterprise-grade security measures to protect your data",
+      title: "Enterprise Security",
+      description: "Robust security measures including firewalls, VPNs, and endpoint protection to safeguard your systems.",
       icon: <ShieldCheck className="h-6 w-6 text-[#E2B478]" />
     },
     {
-      title: "Custom Development",
-      description: "Tailored solutions to meet your specific needs",
+      title: "Custom IT Solutions",
+      description: "Tailored system integration and infrastructure projects to match your business requirements.",
       icon: <Code2 className="h-6 w-6 text-[#E2B478]" />
     },
     {
-      title: "Data Integration",
-      description: "Seamless integration with your existing systems",
+      title: "Cloud & Virtualization",
+      description: "Seamless deployment of cloud platforms, virtualized servers, and enterprise applications.",
       icon: <Database className="h-6 w-6 text-[#E2B478]" />
     }
   ];
+
 
   return (
     <div className="pt-20">
@@ -152,74 +196,75 @@ const Solutions = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Industry-Specific <br />
-              <span className="gradient-text">AI Solutions</span>
+              Industry-Focused <br />
+              <span className="gradient-text">IT Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Discover how our tailored AI solutions can transform your industry and drive innovation in your business operations.
+              Delivering reliable IT infrastructure, networking, and system integration
+              solutions tailored to the unique needs of each industry.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div className="flex items-center">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Brain className="h-5 w-5" />
                 </div>
-                <span>Industry Expertise</span>
+                <span>Industry Experience</span>
               </div>
               <div className="flex items-center">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Code2 className="h-5 w-5" />
                 </div>
-                <span>Custom Solutions</span>
+                <span>Customized IT Solutions</span>
               </div>
               <div className="flex items-center">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Database className="h-5 w-5" />
                 </div>
-                <span>Data Integration</span>
+                <span>Seamless System Integration</span>
               </div>
               <div className="flex items-center">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <ShieldCheck className="h-5 w-5" />
                 </div>
-                <span>Enterprise Security</span>
+                <span>Enterprise-Grade Security</span>
               </div>
             </div>
-            <Link to="/contact">
-              <Button 
+            <Link to="/contact#contacts">
+              <Button
                 variant="primary"
                 size="lg"
                 icon={<ArrowRight className="h-5 w-5" />}
                 iconPosition="right"
               >
-                Explore Solutions
+                Explore Our Solutions
               </Button>
             </Link>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative rounded-xl overflow-hidden shadow-2xl shadow-indigo-900/20"
           >
-            <img 
-              src="https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-              alt="AI Solutions" 
+            <img
+              src="https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="SI Solutions"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-6">
+            {/* <div className="absolute bottom-0 left-0 right-0 p-6">
               <h3 className="text-2xl font-bold mb-2">Industry Solutions</h3>
-              <p className="text-gray-300">Tailored AI solutions for every sector</p>
-            </div>
+              <p className="text-gray-300"> Trusted IT and system integration solutions across multiple sectors</p>
+            </div> */}
           </motion.div>
         </div>
       </Section>
-      
+
       {/* Solutions Grid */}
       <Section
         title="Our Solutions"
-        subtitle="Comprehensive AI solutions tailored for different industries"
+        subtitle="End-to-end IT and cloud solutions tailored for modern enterprises"
         centered
         className="bg-gray-950"
       >
@@ -241,18 +286,18 @@ const Solutions = () => {
                   </li>
                 ))}
               </ul>
-              <Link to="/contact" className="text-[#E2B478] hover:text-[#ebcba2] inline-flex items-center">
+              {/* <Link to="/contact" className="text-[#E2B478] hover:text-[#ebcba2] inline-flex items-center">
                 Learn more <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </Link> */}
             </Card>
           ))}
         </div>
       </Section>
-      
+
       {/* Industries Section */}
       <Section
         title="Industries We Serve"
-        subtitle="Specialized AI solutions for various sectors"
+        subtitle="Reliable IT and network solutions for every industry"
         centered
         className="bg-gradient-to-b from-gray-950 to-gray-900"
       >
@@ -286,11 +331,11 @@ const Solutions = () => {
           ))}
         </div>
       </Section>
-      
+
       {/* Features Section */}
       <Section
         title="Why Choose Our Solutions"
-        subtitle="Key features that set our AI solutions apart"
+        subtitle="Key features that set our IT solutions apart"
         centered
         className="bg-gray-900"
       >
@@ -306,7 +351,7 @@ const Solutions = () => {
           ))}
         </div>
       </Section>
-      
+
       {/* CTA Section */}
       <Section className="bg-gradient-to-t from-gray-950 to-gray-900">
         <div className="max-w-3xl mx-auto text-center">
@@ -318,9 +363,9 @@ const Solutions = () => {
             className="text-3xl md:text-4xl font-bold mb-6"
           >
             Ready to Transform Your Industry <br />
-            <span className="gradient-text">With AI Solutions?</span>
+            <span className="gradient-text">With IT Solutions?</span>
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -328,9 +373,8 @@ const Solutions = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-gray-400 mb-8"
           >
-            Contact us today to discuss how our AI solutions can help you stay ahead in your industry.
-          </motion.p>
-          
+            Contact us today to discuss how our IT infrastructure, networking, and enterprise solutions can optimize your operations and support growth.          </motion.p>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -338,9 +382,9 @@ const Solutions = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link to="/contact">
-              <Button 
-                variant="primary" 
+            <Link to="/contact#contacts">
+              <Button
+                variant="primary"
                 size="lg"
                 icon={<ArrowRight className="h-5 w-5" />}
                 iconPosition="right"
@@ -348,9 +392,9 @@ const Solutions = () => {
                 Get Started
               </Button>
             </Link>
-            <Link to="/services">
-              <Button 
-                variant="outline" 
+            <Link to="/services#service">
+              <Button
+                variant="outline"
                 size="lg"
               >
                 Learn More

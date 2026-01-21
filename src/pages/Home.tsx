@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Cpu, Brain, Server, BarChartBig, CircleSlash2, Stars, Shield, Code, Database, LineChart, Users, Sparkles, Award, Building2, Globe } from 'lucide-react';
+import { ArrowRight, Cpu, Brain, Server, BarChartBig, CircleSlash2, Stars, Shield, Code, Database, LineChart, Users, Sparkles, Award, Building2, Globe, MapPin, ShieldCheck } from 'lucide-react';
 import HeroSection from '../components/home/HeroSection';
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
@@ -9,117 +9,121 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   const services = [
     {
-      title: "AI Consulting",
-      description: "Get expert guidance on implementing AI solutions for your business challenges.",
-      icon: <Brain className="h-10 w-10 text-[#E2B478]" />,
+      title: "IT Infrastructure & System Integration Services",
+      description: "Expert solutions for server virtualization, high-availability systems, network setup, and office IT infrastructure.",
+      icon: <Cpu className="h-10 w-10 text-[#E2B478]" />,
     },
     {
-      title: "Machine Learning",
-      description: "Leverage data-driven insights with custom machine learning models tailored to your needs.",
-      icon: <Server className="h-10 w-10 text-[#DBE278]" />,
+      title: "Cloud & Managed Services",
+      description: "Reliable private, public, and hybrid cloud solutions, unified communications, and advanced IaaS for your business.",
+      icon: <Database className="h-10 w-10 text-[#DBE278]" />,
     },
     {
-      title: "Data Analytics",
-      description: "Transform raw data into actionable business intelligence with our advanced analytics.",
-      icon: <BarChartBig className="h-10 w-10 text-[#E2B478]" />,
+      title: "Security & Compliance Service",
+      description: "Comprehensive cybersecurity, risk management, and compliance solutions to protect your business and data.",
+      icon: <Shield className="h-10 w-10 text-[#E2B478]" />,
     },
   ];
 
   const technologies = [
     {
-      name: "TensorFlow",
-      description: "Deep learning and neural networks",
-      icon: <Brain className="h-8 w-8 text-[#E2B478]" />
+      name: "VMware",
+      description: "Server virtualization and cloud infrastructure",
+      icon: <Server className="h-8 w-8 text-[#E2B478]" />
     },
     {
-      name: "PyTorch",
-      description: "Advanced machine learning models",
-      icon: <Server className="h-8 w-8 text-[#DBE278]" />
+      name: "Cisco",
+      description: "Networking, routing, and security solutions",
+      icon: <MapPin className="h-8 w-8 text-[#DBE278]" />
     },
     {
-      name: "Scikit-Learn",
-      description: "Statistical modeling & analysis",
-      icon: <LineChart className="h-8 w-8 text-[#E2B478]" />
+      name: "Microsoft Azure",
+      description: "Cloud computing and hybrid solutions",
+      icon: <Globe className="h-8 w-8 text-[#E2B478]" />
     },
     {
-      name: "Cloud AI",
-      description: "Scalable cloud infrastructure",
-      icon: <Globe className="h-8 w-8 text-[#DBE278]" />
+      name: "Fortinet",
+      description: "Enterprise security and firewalls",
+      icon: <ShieldCheck className="h-8 w-8 text-[#DBE278]" />
     }
   ];
 
-  const stats = [
-    { value: "98%", label: "Client Satisfaction" },
-    { value: "50+", label: "AI Projects" },
-    { value: "25+", label: "Industry Awards" },
-    { value: "100+", label: "Team Members" }
-  ];
+
+  // const stats = [
+  //   { value: "98%", label: "Client Satisfaction" },
+  //   { value: "50+", label: "AI Projects" },
+  //   { value: "25+", label: "Industry Awards" },
+  //   { value: "100+", label: "Team Members" }
+  // ];
 
   const industries = [
-    "Healthcare",
-    "Finance",
-    "Manufacturing",
-    "Retail",
-    "Education",
-    "Logistics",
-    "Agriculture",
-    "Real Estate"
+    "Telecommunications & Networking",
+    "Government & Public Sector",
+    "Enterprise IT & Corporate Infrastructure",
+    "Security & Surveillance",
+    "Cloud & Virtualization Solutions",
+    "Data Center & IT Operations",
+    "Corporate & Enterprise Services",
+    "Infrastructure & Logistics Support"
   ];
+
+
 
   const features = [
     {
-      title: "Advanced AI Models",
-      description: "State-of-the-art machine learning algorithms",
-      icon: <Brain className="h-8 w-8" />
-    },
-    {
       title: "Secure Infrastructure",
-      description: "Enterprise-grade security measures",
-      icon: <Shield className="h-8 w-8" />
+      description: "Enterprise-grade security for networks, data centers, and applications",
+      icon: <Shield className="h-8 w-8 text-[#E2B478]" />
     },
     {
-      title: "Custom Development",
-      description: "Tailored solutions for your needs",
-      icon: <Code className="h-8 w-8" />
+      title: "System Integration",
+      description: "Seamless integration of IT, network, and cloud solutions",
+      icon: <Database className="h-8 w-8 text-[#DBE278]" />
     },
     {
-      title: "Data Integration",
-      description: "Seamless system integration",
-      icon: <Database className="h-8 w-8" />
+      title: "Cloud & Virtualization",
+      description: "Reliable cloud, virtualization, and hybrid IT solutions",
+      icon: <Server className="h-8 w-8 text-[#E2B478]" />
+    },
+    {
+      title: "Network & IT Operations",
+      description: "Efficient network, data center, and IT operations management",
+      icon: <MapPin className="h-8 w-8 text-[#DBE278]" />
     }
   ];
 
-  const team = [
-    {
-      name: "Aung Min",
-      role: "CEO & Founder",
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
-    },
-    {
-      name: "Lin Moe",
-      role: "CTO",
-      image: "https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg"
-    },
-    {
-      name: "Kyi Phyu",
-      role: "Head of AI",
-      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
-    },
-    {
-      name: "Tun Tun",
-      role: "Lead Developer",
-      image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
-    }
-  ];
+
+  // const team = [
+  //   {
+  //     name: "Aung Min",
+  //     role: "CEO & Founder",
+  //     image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
+  //   },
+  //   {
+  //     name: "Lin Moe",
+  //     role: "CTO",
+  //     image: "https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg"
+  //   },
+  //   {
+  //     name: "Kyi Phyu",
+  //     role: "Head of AI",
+  //     image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
+  //   },
+  //   {
+  //     name: "Tun Tun",
+  //     role: "Lead Developer",
+  //     image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
+  //   }
+  // ];
 
   return (
     <>
       <HeroSection />
-      
+
       {/* About Section */}
       <Section
         title="About Byte Matrix Myanmar"
-        subtitle="We're a team of AI specialists dedicated to creating innovative solutions that drive digital transformation."
+        subtitle="Expertise in IT infrastructure, networking, and system integration to empower businesses across Myanmar."
         centered
         className="bg-gray-950"
       >
@@ -129,29 +133,29 @@ const Home = () => {
               <Cpu className="h-8 w-8" />
             </div>
             <h3 className="text-xl font-bold mb-4">Our Mission</h3>
-            <p className="text-gray-400">To empower businesses in Myanmar with cutting-edge AI solutions that drive growth and innovation.</p>
+            <p className="text-gray-400">Delivering innovative IT solutions and consistent quality services, exceeding customer expectations, and building reliable, cost-effective partnerships.</p>
           </Card>
-          
+
           <Card delay={1} className="p-8 text-center">
             <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-800/80 text-[#DBE278] ">
               <Stars className="h-8 w-8" />
             </div>
             <h3 className="text-xl font-bold mb-4">Our Vision</h3>
-            <p className="text-gray-400">To be the leading AI solutions provider in Myanmar, pioneering the digital transformation journey.</p>
+            <p className="text-gray-400">Sustainable growth through innovative, customer-focused solutions delivered efficiently by a professional and resourceful team.</p>
           </Card>
-          
+
           <Card delay={2} className="p-8 text-center">
             <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-800/80 text-[#E2B478]">
               <CircleSlash2 className="h-8 w-8" />
             </div>
             <h3 className="text-xl font-bold mb-4">Our Values</h3>
-            <p className="text-gray-400">Innovation, integrity, excellence, and client success drive everything we do at Cloud Myanmar.</p>
+            <p className="text-gray-400">We value innovation and transparency, reflected in our products, services, operations, and how we treat our team members.</p>
           </Card>
         </div>
-        
+
         <div className="mt-12 text-center">
           <Link to="/about">
-            <Button 
+            <Button
               variant="outline"
               icon={<ArrowRight className="h-5 w-5" />}
               iconPosition="right"
@@ -161,12 +165,11 @@ const Home = () => {
           </Link>
         </div>
       </Section>
-      
+
       {/* Services Section */}
       <Section
         title="Our Services"
-        subtitle="Discover how our AI solutions can transform your business operations and drive growth."
-        centered
+        subtitle="Explore our innovative IT, cloud, and security solutions designed to empower your business." centered
         className="bg-gradient-to-b from-gray-950 to-gray-900"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -177,16 +180,16 @@ const Home = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">{service.title}</h3>
               <p className="text-gray-400 mb-6">{service.description}</p>
-              <Link to="/services" className="text-[#E2B478] hover:text-[#ebcba2] inline-flex items-center">
+              {/* <Link to="/services" className="text-[#E2B478] hover:text-[#ebcba2] inline-flex items-center">
                 Learn more <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </Link> */}
             </Card>
           ))}
         </div>
-        
+
         <div className="mt-12 text-center">
           <Link to="/services">
-            <Button 
+            <Button
               variant="primary"
               icon={<ArrowRight className="h-5 w-5" />}
               iconPosition="right"
@@ -200,9 +203,8 @@ const Home = () => {
       {/* Technologies Section */}
       <Section
         title="Our Technologies"
-        subtitle="Cutting-edge tools and frameworks we use to build powerful AI solutions"
-        centered
-        className="bg-gray-900"
+        subtitle="The tools and platforms we use to design, integrate, and manage IT and network solutions for businesses." centered
+        className="bg-gradient-to-t from-gray-950 to-gray-900"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {technologies.map((tech, index) => (
@@ -215,10 +217,21 @@ const Home = () => {
             </Card>
           ))}
         </div>
+        <div className="mt-12 text-center">
+          <Link to="/services#technology">
+            <Button
+              variant="outline"
+              icon={<ArrowRight className="h-5 w-5" />}
+              iconPosition="right"
+            >
+              View All
+            </Button>
+          </Link>
+        </div>
       </Section>
 
       {/* Stats Section */}
-      <Section className="bg-gradient-to-b from-gray-900 to-gray-950">
+      {/* <Section className="bg-gradient-to-b from-gray-900 to-gray-950">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div
@@ -234,12 +247,12 @@ const Home = () => {
             </motion.div>
           ))}
         </div>
-      </Section>
+      </Section> */}
 
       {/* Industries Section */}
       <Section
         title="Industries We Serve"
-        subtitle="Specialized AI solutions across various sectors"
+        subtitle="Delivering reliable IT, cloud, and system integration solutions across diverse industries."
         centered
         className="bg-gray-950"
       >
@@ -257,14 +270,24 @@ const Home = () => {
             </motion.div>
           ))}
         </div>
+        <div className="mt-12 text-center">
+          <Link to="/solutions">
+            <Button
+              variant="primary"
+              icon={<ArrowRight className="h-5 w-5" />}
+              iconPosition="right"
+            >
+              View All
+            </Button>
+          </Link>
+        </div>
       </Section>
 
       {/* Features Section */}
       <Section
         title="Why Choose Us"
-        subtitle="Key features that set us apart"
-        centered
-        className="bg-gradient-to-b from-gray-950 to-gray-900"
+        subtitle="Expertise, reliability, and innovative IT solutions that empower your business." centered
+        className="bg-gradient-to-t from-gray-950 to-gray-900"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {features.map((feature, index) => (
@@ -339,9 +362,9 @@ const Home = () => {
           </Card>
         </div>
       </Section> */}
-      
+
       {/* CTA Section */}
-      <Section className="bg-gradient-to-t from-gray-950 to-gray-900">
+      {/* <Section className="bg-gradient-to-t from-gray-950 to-gray-900">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -353,7 +376,7 @@ const Home = () => {
             Ready to Transform Your Business <br />
             <span className="gradient-text">With AI Solutions?</span>
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -363,7 +386,7 @@ const Home = () => {
           >
             Contact us today to discuss how our AI expertise can help your business thrive in the digital age.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -372,16 +395,16 @@ const Home = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link to="/contact">
-              <Button 
-                variant="primary" 
+              <Button
+                variant="primary"
                 size="lg"
               >
                 Get in Touch
               </Button>
             </Link>
             <Link to="/services">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 size="lg"
               >
                 Explore Services
@@ -389,7 +412,7 @@ const Home = () => {
             </Link>
           </motion.div>
         </div>
-      </Section>
+      </Section> */}
     </>
   );
 };

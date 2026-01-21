@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
+import { useLocation } from 'react-router-dom';
 
 type ContactFormData = {
   name: string;
@@ -15,6 +16,17 @@ type ContactFormData = {
 };
 
 const Contact = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+  }, [hash]);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -40,7 +52,7 @@ const Contact = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <Section fullHeight className="bg-gradient-to-b from-gray-900 to-gray-950 flex items-center">
+      <Section id='contacts' fullHeight className="bg-gradient-to-b from-gray-900 to-gray-950 flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +63,7 @@ const Contact = () => {
               Get In <span className="gradient-text">Touch</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Have questions about our AI solutions? Ready to start your digital transformation journey? We're here to help.
+              Have questions about our IT solutions? Ready to optimize your infrastructure or implement enterprise systems? Our experts are here to assist you.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -99,15 +111,18 @@ const Contact = () => {
               </a>
               <a
                 href="#"
-                aria-label="Twitter"
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-colors"
+                aria-label="YouTube"
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition-colors"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a2.965 2.965 0 0 0-2.085-2.086C19.354 3.5 12 3.5 12 3.5s-7.354 0-9.413.6a2.965 2.965 0 0 0-2.085 2.086C0 8.245 0 12 0 12s0 3.755.502 5.814a2.965 2.965 0 0 0 2.085 2.086C4.646 20.5 12 20.5 12 20.5s7.354 0 9.413-.6a2.965 2.965 0 0 0 2.085-2.086C24 15.755 24 12 24 12s0-3.755-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
               </a>
+
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-[#0A66C2] hover:text-white transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               </a>
@@ -297,7 +312,7 @@ const Contact = () => {
       </Section>
 
       {/* FAQ Section */}
-      <Section
+      {/* <Section
         title="Frequently Asked Questions"
         subtitle="Find answers to common questions about our services"
         centered
@@ -341,7 +356,7 @@ const Contact = () => {
             ))}
           </div>
         </div>
-      </Section>
+      </Section> */}
 
       {/* CTA Section */}
       <Section className="bg-gray-950">
@@ -353,8 +368,8 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
-            Ready to Start Your <br />
-            <span className="gradient-text">AI Journey?</span>
+            Ready to Upgrade Your <br />
+            <span className="gradient-text">IT Infrastructure?</span>
           </motion.h2>
 
           <motion.p
@@ -364,7 +379,7 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-gray-400 mb-8"
           >
-            Contact us today for a free consultation and discover how AI can transform your business.
+            Contact us today for a free consultation and see how our system integration solutions can streamline your business operations.
           </motion.p>
 
           <motion.div
@@ -373,14 +388,17 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Button
-              variant="primary"
-              size="lg"
-              icon={<Phone className="h-5 w-5" />}
-              iconPosition="left"
-            >
-              Schedule a Call
-            </Button>
+            <a href="tel:+959408833155">
+              <Button
+                variant="primary"
+                size="lg"
+                icon={<Phone className="h-5 w-5" />}
+                iconPosition="left"
+              >
+                Schedule a Call
+              </Button>
+            </a>
+
           </motion.div>
         </div>
       </Section>
