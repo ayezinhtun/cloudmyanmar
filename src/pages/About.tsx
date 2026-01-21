@@ -152,7 +152,7 @@ const About = () => {
 
       {/* Mission & Vision Section */}
       <Section
-        id='vision'
+        id='mission'
         title="Our Mission & Vision"
         subtitle=""
         centered
