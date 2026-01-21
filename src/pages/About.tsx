@@ -3,9 +3,20 @@ import { Award, Brain, Check, Cpu, Heart, Lightbulb, Shield, Star, Target, Troph
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const About = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+  }, [hash]);
   // const teamMembers = [
   //   {
   //     name: "Aung Min",
@@ -141,6 +152,7 @@ const About = () => {
 
       {/* Mission & Vision Section */}
       <Section
+        id='vision'
         title="Our Mission & Vision"
         subtitle=""
         centered

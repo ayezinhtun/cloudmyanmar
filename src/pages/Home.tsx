@@ -154,7 +154,7 @@ const Home = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <Link to="/about">
+          <Link to="/about#mission">
             <Button
               variant="outline"
               icon={<ArrowRight className="h-5 w-5" />}
