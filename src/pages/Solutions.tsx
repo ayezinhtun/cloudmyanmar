@@ -468,7 +468,7 @@ const Solutions = () => {
                 Get Started
               </Button>
             </Link>
-            <Link to="/services#service">
+            <Link to="/solutions#solution">
               <Button variant="outline" size="lg">
                 Learn More
               </Button>

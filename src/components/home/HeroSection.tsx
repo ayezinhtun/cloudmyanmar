@@ -100,14 +100,14 @@ const HeroSection = () => {
               variants={itemVariants}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Link to="/services#service">
+              <Link to="/solutions#solution">
                 <Button 
                   variant="primary" 
                   size="lg"
                   icon={<ArrowRight className="h-5 w-5" />}
                   iconPosition="right"
                 >
-                  Explore Services
+                  Explore Solutions
                 </Button>
               </Link>
               <Link to="/contact">
