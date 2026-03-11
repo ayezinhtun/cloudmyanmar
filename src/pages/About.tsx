@@ -105,7 +105,7 @@ const About = () => {
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Check className="h-5 w-5" />
                 </div>
-                <span>Founded in 2015</span>
+                <span>Founded in 2020</span>
               </div>
               <div className="flex items-center">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
