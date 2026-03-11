@@ -1,50 +1,26 @@
-import { motion } from 'framer-motion';
-import { ArrowRight, Building2, Users, Star, MessageSquare } from 'lucide-react';
-import Section from '../components/ui/Section';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  Building2,
+  Users,
+  Star,
+  MessageSquare,
+} from "lucide-react";
+import Section from "../components/ui/Section";
+import Card from "../components/ui/Card";
+import Button from "../components/ui/Button";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay } from 'swiper/modules';
-import img1 from '../assets/Bloomberg-Data-for-Health-Initiative-150x150.png';
-import img2 from '../assets/Community-Partners-150x150.png';
-import img3 from '../assets/GTL-150x150.png';
-import img4 from '../assets/GTMH-150x150.png';
-import img5 from '../assets/Heineken-150x150.png';
-import img6 from '../assets/Hotel-Max-150x150.png';
-import img7 from '../assets/IKBZ-150x150.png';
-import img8 from '../assets/im-net-150x150.png';
-import img9 from '../assets/Law-150x150.png';
-import img10 from '../assets/Mandalay-City-Development-150x150.png';
-import img11 from '../assets/Mandalay-Hill-Resort-150x150.png';
-import img12 from '../assets/MCB-150x150.png';
-import img13 from '../assets/MCM-150x150.png';
-import img14 from '../assets/Ministry-of-Transport-150x150.png';
-import img15 from '../assets/MOEE-150x150.png';
-import img16 from '../assets/Mottama-150x150.png';
-import img17 from '../assets/MPT-150x150.png';
-import img18 from '../assets/Myanmar-150x150.png';
-import img19 from '../assets/Myanmar-Red-Cross-150x150.png';
-import img20 from '../assets/Myanmar2-1-150x150.png';
-import img21 from '../assets/N-Health-1-150x150.png';
-import img22 from '../assets/Ooredoo-150x150.png';
-import img23 from '../assets/Path-150x150.png';
-import img24 from '../assets/Sakura-150x150.png';
-import img25 from '../assets/State-of-Qatar-150x150.png';
-import img26 from '../assets/UMG-150x150.png';
-import img27 from '../assets/umg-college-150x150.png';
-import img28 from '../assets/umg-college-150x150.png';
-import img29 from '../assets/UMTGI-150x150.png';
-import img30 from '../assets/wilmar-150x150.png';
-import img31 from '../assets/Yangon-150x150.png';
-import img32 from '../assets/Picture1.png';
-import img33 from '../assets/Picture2.png';
-import img34 from '../assets/Picture3.png';
-import img35 from '../assets/Picture4.png';
-import img36 from '../assets/Picture5.png';
-import img37 from '../assets/Picture6.png';
-import img38 from '../assets/Picture7.png';
+import { Autoplay } from "swiper/modules";
+import img1 from "../assets/img1.png";
+import img2 from "../assets/img2.png";
+import img3 from "../assets/img3.png";
+import img4 from "../assets/img4.png";
+import img5 from "../assets/img5.png";
+import img6 from "../assets/img6.png";
+import img7 from "../assets/img7.png";
+import img8 from "../assets/img8.jfif";
 
 const Clients = () => {
   // const featuredClients = [
@@ -119,7 +95,7 @@ const Clients = () => {
     { value: "150+", label: "Clients Served" },
     { value: "95%", label: "Client Satisfaction" },
     { value: "50+", label: "Industries" },
-    { value: "100%", label: "Project Success Rate" }
+    { value: "100%", label: "Project Success Rate" },
   ];
 
   const clients = [
@@ -131,44 +107,15 @@ const Clients = () => {
     { name: "img6", logo: img6 },
     { name: "img7", logo: img7 },
     { name: "img8", logo: img8 },
-    { name: "img9", logo: img9 },
-    { name: "img10", logo: img10 },
-    { name: "img11", logo: img11 },
-    { name: "img12", logo: img12 },
-    { name: "img13", logo: img13 },
-    { name: "img14", logo: img14 },
-    { name: "img15", logo: img15 },
-    { name: "img16", logo: img16 },
-    { name: "img17", logo: img17 },
-    { name: "img18", logo: img18 },
-    { name: "img19", logo: img19 },
-    { name: "img20", logo: img20 },
-    { name: "img21", logo: img21 },
-    { name: "img22", logo: img22 },
-    { name: "img23", logo: img23 },
-    { name: "img24", logo: img24 },
-    { name: "img25", logo: img25 },
-    { name: "img26", logo: img26 },
-    { name: "img27", logo: img27 },
-    { name: "img28", logo: img28 },
-    { name: "img29", logo: img29 },
-    { name: "img30", logo: img30 },
-    { name: "img31", logo: img31 },
-    { name: "img32", logo: img32 },
-    { name: "img33", logo: img33 },
-    { name: "img34", logo: img34 },
-    { name: "img35", logo: img35 },
-    { name: "img36", logo: img36 },
-    { name: "img37", logo: img37 },
-    { name: "img38", logo: img38 }
   ];
-
-
 
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <Section fullHeight className="bg-gradient-to-b from-gray-900 to-gray-950 flex items-center">
+      <Section
+        fullHeight
+        className="bg-gradient-to-b from-gray-900 to-gray-950 flex items-center"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -179,12 +126,16 @@ const Clients = () => {
               Our Trusted <span className="gradient-text">Clients</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              We have successfully delivered IT, networking, and infrastructure projects for government agencies, enterprises, and corporates across Myanmar.
+              We have successfully delivered IT, networking, and infrastructure
+              projects for government agencies, enterprises, and corporates
+              across Myanmar.
             </p>
             <div className="grid grid-cols-2 gap-6 mb-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-[#E2B478] mb-2">{stat.value}</div>
+                  <div className="text-3xl font-bold text-[#E2B478] mb-2">
+                    {stat.value}
+                  </div>
                   <div className="text-gray-400">{stat.label}</div>
                 </div>
               ))}
@@ -229,25 +180,28 @@ const Clients = () => {
       >
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={5}
-          slidesPerView={8}
+          spaceBetween={2}
+          slidesPerView={7}
           loop={true}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
-        // breakpoints={{
-        //   320: { slidesPerView: 2 },
-        //   640: { slidesPerView: 3 },
-        //   768: { slidesPerView: 4 },
-        //   1024: { slidesPerView: 5 },
-        //   1280: { slidesPerView: 6 },
-        // }}
+          // breakpoints={{
+          //   320: { slidesPerView: 2 },
+          //   640: { slidesPerView: 3 },
+          //   768: { slidesPerView: 4 },
+          //   1024: { slidesPerView: 5 },
+          //   1280: { slidesPerView: 6 },
+          // }}
         >
           {clients.map((client, index) => (
-            <SwiperSlide key={index} className="flex items-center justify-center">
-              <div className="px-2 bg-gray-800/50 rounded-lg flex items-center justify-center">
+            <SwiperSlide
+              key={index}
+              className="flex items-center justify-center"
+            >
+              <div className="px-2 bg-white rounded-lg flex items-center justify-center">
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-28 object-cover"
+                  className="h-28 w-28 object-contain"
                 />
               </div>
             </SwiperSlide>
@@ -328,7 +282,9 @@ const Clients = () => {
             className="text-3xl md:text-4xl font-bold mb-6"
           >
             Ready to <br />
-            <span className="gradient-text">Transform Your IT Infrastructure?</span>
+            <span className="gradient-text">
+              Transform Your IT Infrastructure?
+            </span>
           </motion.h2>
 
           <motion.p
@@ -338,7 +294,9 @@ const Clients = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-gray-400 mb-8"
           >
-            Let’s discuss how our IT, cloud, and system integration solutions can optimize your operations and drive business growth.          </motion.p>
+            Let’s discuss how our IT, cloud, and system integration solutions
+            can optimize your operations and drive business growth.{" "}
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -348,18 +306,12 @@ const Clients = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link to="/contact#contacts">
-              <Button
-                variant="primary"
-                size="lg"
-              >
+              <Button variant="primary" size="lg">
                 Contact Us
               </Button>
             </Link>
             <Link to="/services">
-              <Button
-                variant="outline"
-                size="lg"
-              >
+              <Button variant="outline" size="lg">
                 Our Services
               </Button>
             </Link>

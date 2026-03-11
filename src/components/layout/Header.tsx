@@ -28,10 +28,10 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Clients', path: '/clients' },
-    { name: 'Services', path: '/services' },
+    // { name: 'Services', path: '/services' },
     { name: 'Solutions', path: '/solutions' },
-    { name: 'Support', path: '/support' },
-    { name: 'Projects', path: '/projects' },
+    // { name: 'Support', path: '/support' },
+    // { name: 'Projects', path: '/projects' },
     { name: 'Contact', path: '/contact' },
   ];
 

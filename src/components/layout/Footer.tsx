@@ -50,14 +50,14 @@ const Footer = () => {
 
           {/* Services */}
           <div className='text-center md:text-start'>
-            <h5 className="font-bold mb-4 text-white">Our Services</h5>
+            <h5 className="font-bold mb-4 text-white">Our Solutions</h5>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-400 hover:text-[#E2B478] transition-colors">IT Infrastructure & System Integration Services</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-[#E2B478] transition-colors">Cloud & Managed Services</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-[#E2B478] transition-colors">Data Center Services</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-[#E2B478] transition-colors">Security & Complicance Service</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-[#E2B478] transition-colors">Consulation Services</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-[#E2B478] transition-colors">Technical Transfer Services</Link></li>
+              <li><Link to="/solutions" className="text-gray-400 hover:text-[#E2B478] transition-colors">IT Infrastructure & System Integration Services</Link></li>
+              <li><Link to="/solutions" className="text-gray-400 hover:text-[#E2B478] transition-colors">Cloud & Managed Services</Link></li>
+              <li><Link to="/solutions" className="text-gray-400 hover:text-[#E2B478] transition-colors">Data Center Services</Link></li>
+              <li><Link to="/solutions" className="text-gray-400 hover:text-[#E2B478] transition-colors">Security & Complicance Service</Link></li>
+              <li><Link to="/solutions" className="text-gray-400 hover:text-[#E2B478] transition-colors">Consulation Services</Link></li>
+              <li><Link to="/solutions" className="text-gray-400 hover:text-[#E2B478] transition-colors">Technical Transfer Services</Link></li>
             </ul>
           </div>
 
@@ -73,7 +73,7 @@ const Footer = () => {
                 <Phone className="h-5 w-5 text-[#E2B478] mr-3" />
                 <div>
                   <span className="text-gray-400">+959 408 833 155</span> <br />
-                  <span className="text-gray-400">+959 250 817 798</span>
+                  {/* <span className="text-gray-400">+959 250 817 798</span> */}
                 </div>
 
               </li>

@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
-import { useForm } from 'react-hook-form';
-import Section from '../components/ui/Section';
-import Button from '../components/ui/Button';
-import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { useForm } from "react-hook-form";
+import Section from "../components/ui/Section";
+import Button from "../components/ui/Button";
+import { useLocation } from "react-router-dom";
 
 type ContactFormData = {
   name: string;
@@ -22,7 +22,7 @@ const Contact = () => {
     if (hash) {
       const element = document.querySelector(hash);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" })
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [hash]);
@@ -30,15 +30,20 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ContactFormData>();
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
 
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
-    console.log('Form submitted:', data);
+    console.log("Form submitted:", data);
     setIsSubmitting(false);
     setIsSubmitted(true);
     reset();
@@ -52,7 +57,11 @@ const Contact = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <Section id='contacts' fullHeight className="bg-gradient-to-b from-gray-900 to-gray-950 flex items-center">
+      <Section
+        id="contacts"
+        fullHeight
+        className="bg-gradient-to-b from-gray-900 to-gray-950 flex items-center"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -63,7 +72,9 @@ const Contact = () => {
               Get In <span className="gradient-text">Touch</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Have questions about our IT solutions? Ready to optimize your infrastructure or implement enterprise systems? Our experts are here to assist you.
+              Have questions about our IT solutions? Ready to optimize your
+              infrastructure or implement enterprise systems? Our experts are
+              here to assist you.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -73,9 +84,13 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Our Location</h4>
-                  <p className="text-gray-400 mb-1">Room No. M-723, Sanchaung Housing Estate, Sanchaung Road, Sanchaung Township, Yangon, Myanmar</p>
-                  <p className="text-gray-400">Padumma Road, Shwe Kyapin Ward, Naypyidaw, Myanmar</p>
-
+                  <p className="text-gray-400 mb-1">
+                    Room No. M-723, Sanchaung Housing Estate, Sanchaung Road,
+                    Sanchaung Township, Yangon, Myanmar
+                  </p>
+                  <p className="text-gray-400">
+                    Padumma Road, Shwe Kyapin Ward, Naypyidaw, Myanmar
+                  </p>
                 </div>
               </div>
 
@@ -107,14 +122,30 @@ const Contact = () => {
                 aria-label="Facebook"
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-colors"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
               </a>
               <a
                 href="#"
                 aria-label="YouTube"
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition-colors"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
                   <path d="M23.498 6.186a2.965 2.965 0 0 0-2.085-2.086C19.354 3.5 12 3.5 12 3.5s-7.354 0-9.413.6a2.965 2.965 0 0 0-2.085 2.086C0 8.245 0 12 0 12s0 3.755.502 5.814a2.965 2.965 0 0 0 2.085 2.086C4.646 20.5 12 20.5 12 20.5s7.354 0 9.413-.6a2.965 2.965 0 0 0 2.085-2.086C24 15.755 24 12 24 12s0-3.755-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                 </svg>
               </a>
@@ -124,7 +155,20 @@ const Contact = () => {
                 aria-label="LinkedIn"
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-[#0A66C2] hover:text-white transition-colors"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
               </a>
             </div>
           </motion.div>
@@ -140,75 +184,104 @@ const Contact = () => {
             {isSubmitted ? (
               <div className="bg-green-900/30 border border-green-700 rounded-lg p-4 text-green-400">
                 <h3 className="font-bold flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 mr-2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   Message Sent Successfully!
                 </h3>
-                <p className="mt-2">Thank you for contacting us. We'll get back to you shortly.</p>
+                <p className="mt-2">
+                  Thank you for contacting us. We'll get back to you shortly.
+                </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-300 mb-1"
+                    >
                       Your Name <span className="text-[#E2B478]">*</span>
                     </label>
                     <input
                       id="name"
                       type="text"
-                      {...register('name', { required: 'Name is required' })}
-                      className={`w-full px-4 py-2 bg-gray-700/50 border ${errors.name ? 'border-red-500' : 'border-gray-600'} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                      {...register("name", { required: "Name is required" })}
+                      className={`w-full px-4 py-2 bg-gray-700/50 border ${errors.name ? "border-red-500" : "border-gray-600"} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
                       placeholder="Enter Name"
                     />
                     {errors.name && (
-                      <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>
+                      <p className="mt-1 text-sm text-red-500">
+                        {errors.name.message}
+                      </p>
                     )}
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-300 mb-1"
+                    >
                       Email Address <span className="text-[#E2B478]">*</span>
                     </label>
                     <input
                       id="email"
                       type="email"
-                      {...register('email', {
-                        required: 'Email is required',
+                      {...register("email", {
+                        required: "Email is required",
                         pattern: {
                           value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                          message: 'Invalid email address',
-                        }
+                          message: "Invalid email address",
+                        },
                       })}
-                      className={`w-full px-4 py-2 bg-gray-700/50 border ${errors.email ? 'border-red-500' : 'border-gray-600'} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                      className={`w-full px-4 py-2 bg-gray-700/50 border ${errors.email ? "border-red-500" : "border-gray-600"} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
                       placeholder="Enter Email"
                     />
                     {errors.email && (
-                      <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
+                      <p className="mt-1 text-sm text-red-500">
+                        {errors.email.message}
+                      </p>
                     )}
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-1">
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-medium text-gray-300 mb-1"
+                    >
                       Company Name
                     </label>
                     <input
                       id="company"
                       type="text"
-                      {...register('company')}
+                      {...register("company")}
                       className="w-full px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                       placeholder="Your Company"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-1">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-300 mb-1"
+                    >
                       Phone Number
                     </label>
                     <input
                       id="phone"
                       type="tel"
-                      {...register('phone')}
+                      {...register("phone")}
                       className="w-full px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                       placeholder="Enter Phone Number"
                     />
@@ -216,34 +289,48 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-1">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-300 mb-1"
+                  >
                     Subject <span className="text-[#E2B478]">*</span>
                   </label>
                   <input
                     id="subject"
                     type="text"
-                    {...register('subject', { required: 'Subject is required' })}
-                    className={`w-full px-4 py-2 bg-gray-700/50 border ${errors.subject ? 'border-red-500' : 'border-gray-600'} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                    {...register("subject", {
+                      required: "Subject is required",
+                    })}
+                    className={`w-full px-4 py-2 bg-gray-700/50 border ${errors.subject ? "border-red-500" : "border-gray-600"} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
                     placeholder="How can we help you?"
                   />
                   {errors.subject && (
-                    <p className="mt-1 text-sm text-red-500">{errors.subject.message}</p>
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.subject.message}
+                    </p>
                   )}
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-300 mb-1"
+                  >
                     Message <span className="text-[#E2B478]">*</span>
                   </label>
                   <textarea
                     id="message"
                     rows={5}
-                    {...register('message', { required: 'Message is required' })}
-                    className={`w-full px-4 py-2 bg-gray-700/50 border ${errors.message ? 'border-red-500' : 'border-gray-600'} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+                    {...register("message", {
+                      required: "Message is required",
+                    })}
+                    className={`w-full px-4 py-2 bg-gray-700/50 border ${errors.message ? "border-red-500" : "border-gray-600"} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
                     placeholder="Please describe how we can assist you..."
                   ></textarea>
                   {errors.message && (
-                    <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.message.message}
+                    </p>
                   )}
                 </div>
 
@@ -264,16 +351,16 @@ const Contact = () => {
       </Section>
 
       {/* Map Section */}
-      <Section
+      {/* <Section
         title="Visit Our Office"
         subtitle="We're located in the heart of Yangon's Innovation District"
         centered
         className="bg-gray-950"
       >
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="relative rounded-xl overflow-hidden h-[500px] shadow-xl shadow-indigo-900/10">
-            {/* Replace with actual map or iframe */}
-            {/* <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
+            Replace with actual map or iframe
+            <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
               <div className="text-center px-4">
                 <MapPin className="h-16 w-16 text-[#E2B478] mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Cloud Myanmar</h3>
@@ -281,35 +368,33 @@ const Contact = () => {
                   123 AI Avenue, Innovation District, Yangon, Myanmar
                 </p>
               </div>
-            </div> */}
+            </div>
 
             <iframe
               title="Yangon Location"
-              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1674.6884894116372!2d96.13336877822645!3d16.801357883000243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb4d92b362af%3A0xbdad8f8eed2b10d6!2sSanchaung%20Garden%20Residence!5e1!3m2!1sen!2smm!4v1766567709118!5m2!1sen!2smm'
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1674.6884894116372!2d96.13336877822645!3d16.801357883000243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb4d92b362af%3A0xbdad8f8eed2b10d6!2sSanchaung%20Garden%20Residence!5e1!3m2!1sen!2smm!4v1766567709118!5m2!1sen!2smm"
               width="100%"
               height="100%"
-              style={{ border: 0, minHeight: '300px' }}
+              style={{ border: 0, minHeight: "300px" }}
               allowFullScreen
               loading="lazy"
             />
-
           </div>
 
           <div className="relative rounded-xl overflow-hidden h-[500px] shadow-xl shadow-indigo-900/10">
-            {/* Replace with actual map or iframe */}
+            Replace with actual map or iframe
             <iframe
               title="Naypyitaw Location"
-              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1674.6884894116372!2d96.13336877822645!3d16.801357883000243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb4d92b362af%3A0xbdad8f8eed2b10d6!2sSanchaung%20Garden%20Residence!5e1!3m2!1sen!2smm!4v1766567709118!5m2!1sen!2smm'
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1674.6884894116372!2d96.13336877822645!3d16.801357883000243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb4d92b362af%3A0xbdad8f8eed2b10d6!2sSanchaung%20Garden%20Residence!5e1!3m2!1sen!2smm!4v1766567709118!5m2!1sen!2smm"
               width="100%"
               height="100%"
-              style={{ border: 0, minHeight: '300px' }}
+              style={{ border: 0, minHeight: "300px" }}
               allowFullScreen
               loading="lazy"
             />
           </div>
         </div>
-
-      </Section>
+      </Section> */}
 
       {/* FAQ Section */}
       {/* <Section
@@ -379,26 +464,36 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-gray-400 mb-8"
           >
-            Contact us today for a free consultation and see how our system integration solutions can streamline your business operations.
+            Contact us today for a free consultation and see how our system
+            integration solutions can streamline your business operations.
           </motion.p>
 
           <motion.div
+            className="flex gap-4 items-center justify-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <a href="tel:+959408833155">
+            <a href="tel:+959 408 833 155">
               <Button
                 variant="primary"
-                size="lg"
                 icon={<Phone className="h-5 w-5" />}
                 iconPosition="left"
               >
-                Schedule a Call
+                Call Now
               </Button>
             </a>
 
+            <a href="mailto:sales@bytematrixmyanmar.com?subject=Support Request">
+              <Button
+                variant="primary"
+                icon={<Mail className="h-5 w-5" />}
+                iconPosition="left"
+              >
+                Send Email
+              </Button>
+            </a>
           </motion.div>
         </div>
       </Section>

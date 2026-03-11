@@ -10,17 +10,17 @@ const Home = () => {
   const services = [
     {
       title: "IT Infrastructure & System Integration Services",
-      description: "Expert solutions for server virtualization, high-availability systems, network setup, and office IT infrastructure.",
+      description: "Design, deployment, and integration of IT infrastructure solutions tailored to enterprise requirements.",
       icon: <Cpu className="h-10 w-10 text-[#E2B478]" />,
     },
     {
       title: "Cloud & Managed Services",
-      description: "Reliable private, public, and hybrid cloud solutions, unified communications, and advanced IaaS for your business.",
+      description: "Provision of cloud platforms and managed IT services to ensure availability, scalability, and operational efficiency.",
       icon: <Database className="h-10 w-10 text-[#DBE278]" />,
     },
     {
       title: "Security & Compliance Service",
-      description: "Comprehensive cybersecurity, risk management, and compliance solutions to protect your business and data.",
+      description: "Delivery of cybersecurity solutions and compliance management to safeguard IT systems and data.",
       icon: <Shield className="h-10 w-10 text-[#E2B478]" />,
     },
   ];
@@ -168,7 +168,7 @@ const Home = () => {
 
       {/* Services Section */}
       <Section
-        title="Our Services"
+        title="Our Solutions"
         subtitle="Explore our innovative IT, cloud, and security solutions designed to empower your business." centered
         className="bg-gradient-to-b from-gray-950 to-gray-900"
       >
@@ -188,20 +188,20 @@ const Home = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <Link to="/services#service">
+          <Link to="/solutions#solution">
             <Button
               variant="primary"
               icon={<ArrowRight className="h-5 w-5" />}
               iconPosition="right"
             >
-              View All Services
+              View All Solutions
             </Button>
           </Link>
         </div>
       </Section>
 
       {/* Technologies Section */}
-      <Section
+      {/* <Section
         title="Our Technologies"
         subtitle="The tools and platforms we use to design, integrate, and manage IT and network solutions for businesses." centered
         className="bg-gradient-to-t from-gray-950 to-gray-900"
@@ -228,7 +228,7 @@ const Home = () => {
             </Button>
           </Link>
         </div>
-      </Section>
+      </Section> */}
 
       {/* Stats Section */}
       {/* <Section className="bg-gradient-to-b from-gray-900 to-gray-950">

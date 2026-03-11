@@ -1,10 +1,34 @@
-import { motion } from 'framer-motion';
-import { ArrowRight, BookOpen, Brain, Briefcase, Building2, Camera, BarChart as ChartBar, Cloud, Code2, Cpu, Database, Factory, FileText, Globe, HeartPulse, Home, LineChart, Server, ShieldCheck, ShoppingBag, Truck } from 'lucide-react';
-import Section from '../components/ui/Section';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Link, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  BookOpen,
+  Brain,
+  Briefcase,
+  Building2,
+  Camera,
+  BarChart as ChartBar,
+  Cloud,
+  Code2,
+  Cpu,
+  Database,
+  Factory,
+  FileText,
+  Globe,
+  HardDrive,
+  HeartPulse,
+  Home,
+  LineChart,
+  Server,
+  Shield,
+  ShieldCheck,
+  ShoppingBag,
+  Truck,
+} from "lucide-react";
+import Section from "../components/ui/Section";
+import Card from "../components/ui/Card";
+import Button from "../components/ui/Button";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Solutions = () => {
   const { hash } = useLocation();
@@ -13,79 +37,90 @@ const Solutions = () => {
     if (hash) {
       const element = document.querySelector(hash);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" })
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [hash]);
   const solutions = [
     {
-      title: "Network Infrastructure",
-      description: "Design, implementation, and maintenance of enterprise and government networks",
-      icon: <Server className="h-10 w-10 text-[#E2B478]" />,
+      title: "IT Infrastructure & System Integration Services",
+      description:
+        "Design, deployment, and integration of IT infrastructure solutions tailored to enterprise requirements.",
+      icon: <Cpu className="h-10 w-10 text-[#E2B478]" />,
       features: [
-        "Core & branch network deployment",
-        "Firewall & VPN setup",
-        "Router & switch configuration",
-        "WAN & LAN optimization"
-      ]
-    },
-    {
-      title: "Data Center Solutions",
-      description: "Comprehensive data center setup, migration, and operations",
-      icon: <Database className="h-10 w-10 text-[#DBE278]" />,
-      features: [
-        "Turnkey data center implementation",
-        "VMware & cloud virtualization",
-        "High availability & redundancy",
-        "Disaster recovery setup"
-      ]
+        "Server Consolidation/ Virtualization",
+        "High Availability/ Redundancy Solutions",
+        "Fault Tolerant Solutions & Hyper-Converged Infrastructure",
+        "Wireless Infrastructure & BYOD Solutions",
+        "Infrastructure Upgrade & Migration",
+        "IT Infrastructure Setup for New Offices & Relocation",
+        "DC/DR Core Network Solutions",
+      ],
     },
     {
       title: "Cloud & Managed Services",
-      description: "Cloud migration, management, and scalable IT solutions",
-      icon: <Cloud className="h-10 w-10 text-[#E2B478]" />,
+      description:
+        "Provision of cloud platforms and managed IT services to ensure availability, scalability, and operational efficiency.",
+      icon: <Database className="h-10 w-10 text-[#DBE278]" />,
       features: [
-        "Public & private cloud solutions",
-        "Hybrid cloud integration",
-        "Serverless and scalable infrastructure",
-        "Managed IT support & monitoring"
-      ]
+        "Private and Public Solutions",
+        "Hybrid Solutions",
+        "Unified Communications",
+        "Telepresence and Teleconference Solutions",
+        "VOIP Solutions",
+        "Advanced IaaS solution",
+      ],
     },
     {
-      title: "Cybersecurity & Compliance",
-      description: "Protecting enterprise networks and ensuring regulatory compliance",
-      icon: <ShieldCheck className="h-10 w-10 text-[#DBE278]" />,
+      title: "Data Center Services",
+      description:
+        "Implementation, optimization, and support of data center infrastructure.",
+      icon: <HardDrive className="h-10 w-10 text-[#E2B478]" />,
       features: [
-        "Firewall & endpoint security",
-        "Vulnerability scanning",
-        "Compliance & risk management",
-        "DDoS & threat protection"
-      ]
+        "Active-Active DC/DR Solutions",
+        "Storage & Backup Solutions",
+        "Project Management",
+        "Delivering Cost Effective & Quality Solutions",
+        "Software Defined Networding (SDN) and Virtualization",
+      ],
     },
     {
-      title: "IT Infrastructure Upgrade",
-      description: "Upgrading legacy systems and optimizing enterprise IT environments",
-      icon: <Cpu className="h-10 w-10 text-[#E2B478]" />,
+      title: "Security & Compliance Services",
+      description:
+        "Delivery of cybersecurity solutions and compliance management to safeguard IT systems and data.",
+      icon: <Shield className="h-10 w-10 text-[#DBE278]" />,
       features: [
-        "EOL device replacement",
-        "Server & storage upgrades",
-        "Network optimization",
-        "Performance monitoring"
-      ]
+        "Advanced Persistent Threat Protection",
+        "Compliance Management",
+        "Cyberseccurity & Risk Management",
+        "Enabling & Optimizing SSL/TLS",
+        "Web Application Firewalls",
+        "DDoS Protection",
+        "Data Center and Enterprise Security",
+        "PCI Compliant Solutions",
+        "Next Generation Firewalls",
+      ],
     },
     {
-      title: "Security & Surveillance Solutions",
-      description: "Deployment of CCTV, access control, and monitoring systems",
+      title: "Consultation Services",
+      description:
+        "Professional advisory services for IT strategy, system architecture, and digital transformation.",
+      icon: <BookOpen className="h-10 w-10 text-[#E2B478]" />,
+      features: [
+        "Gain external and objective advice with professional recommendations",
+        "Hire extra hands for one-time projects where the hiring of permanent employees is not necessary",
+        "Acquire professional help in project scoping and planning",
+        "Convert your business requirements into technical language",
+      ],
+    },
+    {
+      title: "Technical Transfer Services",
+      description:
+        "Structured knowledge transfer and technical training to empower customer IT teams.",
       icon: <Camera className="h-10 w-10 text-[#DBE278]" />,
-      features: [
-        "CCTV installation & monitoring",
-        "Secure local network setup",
-        "Access control systems",
-        "Government & enterprise compliance"
-      ]
-    }
+      features: ["Knowledge Sharing and Technical Transfer Services"],
+    },
   ];
-
 
   const industries = [
     {
@@ -95,8 +130,8 @@ const Solutions = () => {
         "Core & branch network deployment",
         "Firewall & VPN setup",
         "Router & switch configuration",
-        "WAN & LAN optimization"
-      ]
+        "WAN & LAN optimization",
+      ],
     },
     {
       name: "Government & Public Sector",
@@ -105,8 +140,8 @@ const Solutions = () => {
         "E-Government network upgrades",
         "Datacenter setup & DR implementation",
         "Email & communication system expansion",
-        "Compliance & risk management"
-      ]
+        "Compliance & risk management",
+      ],
     },
     {
       name: "Enterprise IT & Corporate Infrastructure",
@@ -115,8 +150,8 @@ const Solutions = () => {
         "Data center virtualization (VMware, Azure)",
         "Cloud migration & management",
         "Server & storage upgrades",
-        "End-to-end IT support"
-      ]
+        "End-to-end IT support",
+      ],
     },
     {
       name: "Security & Surveillance",
@@ -125,8 +160,8 @@ const Solutions = () => {
         "Firewall & endpoint protection",
         "Vulnerability scanning",
         "CCTV & monitoring systems",
-        "DDoS & threat protection"
-      ]
+        "DDoS & threat protection",
+      ],
     },
     {
       name: "Cloud & Virtualization Solutions",
@@ -135,8 +170,8 @@ const Solutions = () => {
         "Cloud migration & deployment",
         "Virtual machines & containerization",
         "Serverless infrastructure",
-        "DevOps & automation"
-      ]
+        "DevOps & automation",
+      ],
     },
     {
       name: "Data Center & IT Operations",
@@ -145,8 +180,8 @@ const Solutions = () => {
         "Datacenter setup & management",
         "Backup & disaster recovery",
         "Monitoring & optimization",
-        "Hardware & network support"
-      ]
+        "Hardware & network support",
+      ],
     },
     {
       name: "Corporate & Enterprise Services",
@@ -155,8 +190,8 @@ const Solutions = () => {
         "IT consulting & project management",
         "Enterprise software deployment",
         "Collaboration & communication systems",
-        "End-user support"
-      ]
+        "End-user support",
+      ],
     },
     {
       name: "Infrastructure & Logistics Support",
@@ -165,41 +200,45 @@ const Solutions = () => {
         "Network connectivity for offices & warehouses",
         "Server & cloud support",
         "VPN & secure communications",
-        "Data tracking systems"
-      ]
-    }
+        "Data tracking systems",
+      ],
+    },
   ];
-
-
 
   const features = [
     {
       title: "Scalable Infrastructure",
-      description: "IT solutions designed to grow with your organization, from branch networks to data centers.",
-      icon: <Building2 className="h-6 w-6 text-[#E2B478]" />
+      description:
+        "IT solutions designed to grow with your organization, from branch networks to data centers.",
+      icon: <Building2 className="h-6 w-6 text-[#E2B478]" />,
     },
     {
       title: "Enterprise Security",
-      description: "Robust security measures including firewalls, VPNs, and endpoint protection to safeguard your systems.",
-      icon: <ShieldCheck className="h-6 w-6 text-[#E2B478]" />
+      description:
+        "Robust security measures including firewalls, VPNs, and endpoint protection to safeguard your systems.",
+      icon: <ShieldCheck className="h-6 w-6 text-[#E2B478]" />,
     },
     {
       title: "Custom IT Solutions",
-      description: "Tailored system integration and infrastructure projects to match your business requirements.",
-      icon: <Code2 className="h-6 w-6 text-[#E2B478]" />
+      description:
+        "Tailored system integration and infrastructure projects to match your business requirements.",
+      icon: <Code2 className="h-6 w-6 text-[#E2B478]" />,
     },
     {
       title: "Cloud & Virtualization",
-      description: "Seamless deployment of cloud platforms, virtualized servers, and enterprise applications.",
-      icon: <Database className="h-6 w-6 text-[#E2B478]" />
-    }
+      description:
+        "Seamless deployment of cloud platforms, virtualized servers, and enterprise applications.",
+      icon: <Database className="h-6 w-6 text-[#E2B478]" />,
+    },
   ];
-
 
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <Section fullHeight className="bg-gradient-to-b from-gray-900 to-gray-950 flex items-center">
+      <Section
+        fullHeight
+        className="bg-gradient-to-b from-gray-900 to-gray-950 flex items-center"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -211,8 +250,9 @@ const Solutions = () => {
               <span className="gradient-text">IT Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Delivering reliable IT infrastructure, networking, and system integration
-              solutions tailored to the unique needs of each industry.
+              Delivering reliable IT infrastructure, networking, and system
+              integration solutions tailored to the unique needs of each
+              industry.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div className="flex items-center">
@@ -274,6 +314,7 @@ const Solutions = () => {
 
       {/* Solutions Grid */}
       <Section
+        id="solution"
         title="Our Solutions"
         subtitle="End-to-end IT and cloud solutions tailored for modern enterprises"
         centered
@@ -282,16 +323,25 @@ const Solutions = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {solutions.map((solution, index) => (
             <Card key={index} delay={index} className="p-8">
-              <div className="mb-6">
-                {solution.icon}
-              </div>
-              <h3 className="text-xl font-bold mb-4">{solution.title}</h3>
+              <div className="mb-6">{solution.icon}</div>
+              <h3 className="text-xl font-bold mb-4 min-h-[3rem]">{solution.title}</h3>
               <p className="text-gray-400 mb-6">{solution.description}</p>
               <ul className="space-y-2 mb-6">
                 {solution.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-gray-300">
                     <div className="mr-2 text-[#E2B478]">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
                     </div>
                     {feature}
                   </li>
@@ -307,7 +357,7 @@ const Solutions = () => {
 
       {/* Industries Section */}
       <Section
-        id='solution'
+        id="solution"
         title="Industries We Serve"
         subtitle="Reliable IT and network solutions for every industry"
         centered
@@ -333,7 +383,18 @@ const Solutions = () => {
                 {industry.solutions.map((solution, idx) => (
                   <li key={idx} className="flex items-start">
                     <div className="mr-2 mt-1 text-[#E2B478]">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
                     </div>
                     <span className="text-gray-300">{solution}</span>
                   </li>
@@ -385,7 +446,10 @@ const Solutions = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-gray-400 mb-8"
           >
-            Contact us today to discuss how our IT infrastructure, networking, and enterprise solutions can optimize your operations and support growth.          </motion.p>
+            Contact us today to discuss how our IT infrastructure, networking,
+            and enterprise solutions can optimize your operations and support
+            growth.{" "}
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -405,10 +469,7 @@ const Solutions = () => {
               </Button>
             </Link>
             <Link to="/services#service">
-              <Button
-                variant="outline"
-                size="lg"
-              >
+              <Button variant="outline" size="lg">
                 Learn More
               </Button>
             </Link>
