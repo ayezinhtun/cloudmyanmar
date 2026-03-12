@@ -1,10 +1,23 @@
-import { motion } from 'framer-motion';
-import { Award, Brain, Check, Cpu, Heart, Lightbulb, Shield, Star, Target, Trophy, Users } from 'lucide-react';
-import Section from '../components/ui/Section';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Link, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { motion } from "framer-motion";
+import {
+  Award,
+  Brain,
+  Check,
+  Cpu,
+  Heart,
+  Lightbulb,
+  Shield,
+  Star,
+  Target,
+  Trophy,
+  Users,
+} from "lucide-react";
+import Section from "../components/ui/Section";
+import Card from "../components/ui/Card";
+import Button from "../components/ui/Button";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { title } from "framer-motion/client";
 
 const About = () => {
   const { hash } = useLocation();
@@ -13,7 +26,7 @@ const About = () => {
     if (hash) {
       const element = document.querySelector(hash);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" })
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [hash]);
@@ -44,39 +57,66 @@ const About = () => {
   //   },
   // ];
 
+  const services = [
+    {
+      title: "State government ministries",
+    },
+    {
+      title:
+        "Internet Service Providers (Domestic and international telecom companies)",
+    },
+    {
+      title: "Hotels and tourism businesses",
+    },
+    {
+      title: "Banks",
+    },
+    {
+      title: "Locally-based international companies, and",
+    },
+    {
+      title: "Other organizations.",
+    },
+  ];
+
   const values = [
     {
       title: "Innovation",
       icon: <Lightbulb className="h-8 w-8 text-[#E2B478]" />,
-      description: "We constantly explore new IT, networking, and system integration solutions to meet evolving business needs."
+      description:
+        "We constantly explore new IT, networking, and system integration solutions to meet evolving business needs.",
     },
     {
       title: "Excellence",
       icon: <Star className="h-8 w-8 text-[#E2B478]" />,
-      description: "We deliver the highest quality in IT infrastructure, cloud, and network projects."
+      description:
+        "We deliver the highest quality in IT infrastructure, cloud, and network projects.",
     },
     {
       title: "Integrity",
       icon: <Shield className="h-8 w-8 text-[#E2B478]" />,
-      description: "We operate with transparency, ethical responsibility, and professionalism in every project."
+      description:
+        "We operate with transparency, ethical responsibility, and professionalism in every project.",
     },
     {
       title: "Collaboration",
       icon: <Users className="h-8 w-8 text-[#E2B478]" />,
-      description: "We work closely with clients and partners to ensure seamless system integration and IT success."
+      description:
+        "We work closely with clients and partners to ensure seamless system integration and IT success.",
     },
     {
       title: "Reliability",
       icon: <Heart className="h-8 w-8 text-[#E2B478]" />,
-      description: "We provide dependable IT solutions that businesses can trust for mission-critical operations."
+      description:
+        "We provide dependable IT solutions that businesses can trust for mission-critical operations.",
     },
     {
       title: "Impact",
       icon: <Target className="h-8 w-8 text-[#E2B478]" />,
-      description: "We aim to create meaningful improvements in our clients’ IT and business operations."
-    }
+      description:
+        "We aim to create meaningful improvements in our clients’ IT and business operations.",
+    },
   ];
-
 
   // const achievements = [
   //   { count: "150+", label: "Clients Served" },
@@ -88,7 +128,10 @@ const About = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <Section fullHeight className="bg-gradient-to-b from-gray-900 to-gray-950 flex items-center">
+      <Section
+        fullHeight
+        className="bg-gradient-to-b from-gray-900 to-gray-950 flex items-center"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -98,9 +141,45 @@ const About = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               About <span className="gradient-text">Byte Matrix Myanmar</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              We are a leading System Integrator in Myanmar, delivering innovative IT, cloud, and network solutions that empower businesses to operate efficiently and securely.            </p>
-            <div className="flex flex-wrap gap-4 mb-8">
+            <p className="text-xl text-gray-300 mb-4">
+              The company Byte Matrix Myanmar was established in 2020 and is
+              comprised of experienced and specialized professionals who hold
+              international-level certifications.
+            </p>
+
+            <p className="text-xl text-gray-300 mb-4">
+              The company is currently focusing on and expanding its services,
+              which include providing consultation and service delivery to
+              ensure: <br />
+              Secure, reliable, fast and convenient network connectivity; and
+              Network security and compliance with international standards and
+              procedures for:
+            </p>
+
+            <ul className="space-y-2 mb-8">
+              {services.map((service, idx) => (
+                <li key={idx} className="flex items-center text-gray-300 text-lg">
+                  <div className="mr-2 text-[#E2B478]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+
+                  {service.title}
+                </li>
+              ))}
+            </ul>
+
+            {/* <div className="flex flex-wrap gap-4 mb-8">
               <div className="flex items-center">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Check className="h-5 w-5" />
@@ -113,18 +192,16 @@ const About = () => {
                 </div>
                 <span>Based in Yangon</span>
               </div>
-              {/* <div className="flex items-center">
+              <div className="flex items-center">
                 <div className="p-2 bg-gray-800/80 rounded-full text-[#E2B478] mr-3">
                   <Check className="h-5 w-5" />
                 </div>
                 <span>25+ Specialists</span>
-              </div> */}
-            </div>
-            <Link to="/contact#contacts">
-              <Button
-                variant="primary"
-                size="lg"
-              >
+              </div>
+            </div> */}
+            
+            <Link to="/contact">
+              <Button variant="primary" size="lg">
                 Get in Touch
               </Button>
             </Link>
@@ -152,7 +229,7 @@ const About = () => {
 
       {/* Mission & Vision Section */}
       <Section
-        id='mission'
+        id="mission"
         title="Our Mission & Vision"
         subtitle=""
         centered
@@ -165,14 +242,25 @@ const About = () => {
             </div>
             <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
             <p className="text-gray-400 mb-4">
-              Helping customers to accelerate the business ambitions by delivering innovative IT solutions and consistent quality services at all time.
+              Byte Matrix Myanmar's mission is to
             </p>
-            <p className="text-gray-400 mb-4">
-              Striving to exceed customers’ expectations to become selected vendor, then to become  preferred vendor.
-            </p>
-            <p className="text-gray-400">
-              Being the partner of choice for a leading system integrator, build and maintain the most innovative, reliable and cost-effective solution.
-            </p>
+            <ul className="list-disc pl-4 space-y-2 text-gray-300">
+              <li>
+                Provide high quality, affordable IT solutions and services
+              </li>
+              <li>
+                Create and cultivate long-term relationships with clients
+              </li>
+              <li>
+                Respond immediately to the changing needs of our clients
+              </li>
+              <li>
+                Achieve complete customer satisfaction
+              </li>
+              <li>
+                Improve our services to the best supported to clients continuously
+              </li>
+            </ul>
           </Card>
 
           <Card className="p-8">
@@ -181,9 +269,19 @@ const About = () => {
             </div>
             <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
             <p className="text-gray-400 mb-4">
-              To achieve year to year sustainable growth through wide portfolio of innovation, customer focused products and services efficiently delivered by a professional and resourceful team through active communication.
+              Byte Matrix Myanmar's vision is to
             </p>
-
+            <ul className="list-disc pl-4 space-y-2 text-gray-300">
+              <li>
+                To set the standard for secure and reliable digital transformation accross all sectors in Myanmar
+              </li>
+              <li>
+                To ensure every client benefits from international best practices and future-proof technology
+              </li>
+              <li>
+                To be recognized as the benchmark for quality and innovation in IT solutions
+              </li>
+            </ul>
           </Card>
         </div>
       </Section>
@@ -261,7 +359,8 @@ const About = () => {
       {/* Our Values Section */}
       <Section
         title="Our Values"
-        subtitle="Core principles that drive our system integration, IT, and networking services." centered
+        subtitle="Core principles that drive our system integration, IT, and networking services."
+        centered
         className=""
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">

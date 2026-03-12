@@ -4,7 +4,6 @@ import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useForm } from "react-hook-form";
 import Section from "../components/ui/Section";
 import Button from "../components/ui/Button";
-import { useLocation } from "react-router-dom";
 
 type ContactFormData = {
   name: string;
@@ -16,16 +15,6 @@ type ContactFormData = {
 };
 
 const Contact = () => {
-  const { hash } = useLocation();
-
-  useEffect(() => {
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [hash]);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -58,7 +47,6 @@ const Contact = () => {
     <div className="pt-20">
       {/* Hero Section */}
       <Section
-        id="contacts"
         fullHeight
         className="bg-gradient-to-b from-gray-900 to-gray-950 flex items-center"
       >

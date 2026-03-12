@@ -29,6 +29,9 @@ import Card from "../components/ui/Card";
 import Button from "../components/ui/Button";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { title } from "framer-motion/client";
+
+import img14 from "../assets/img14.png";
 
 const Solutions = () => {
   const { hash } = useLocation();
@@ -207,28 +210,44 @@ const Solutions = () => {
 
   const features = [
     {
-      title: "Scalable Infrastructure",
-      description:
-        "IT solutions designed to grow with your organization, from branch networks to data centers.",
-      icon: <Building2 className="h-6 w-6 text-[#E2B478]" />,
+      title: "Comprehensive Service Portfolio",
+      description: (
+        <>
+          We are a single-source partner for all your technological needs,
+          spanning
+          <b> IT Infrastructure, Datacenter, Cloud, and Managed Services. </b>
+        </>
+      ),
     },
     {
-      title: "Enterprise Security",
-      description:
-        "Robust security measures including firewalls, VPNs, and endpoint protection to safeguard your systems.",
-      icon: <ShieldCheck className="h-6 w-6 text-[#E2B478]" />,
+      title: "Certified Security Experts",
+      description: (
+        <>
+          Our primary focus is security. We ensure your systems are
+          <b>compliant and resilient</b> with international standards, guided by
+          our team of <b>internationally certified professionals.</b>
+        </>
+      ),
     },
     {
-      title: "Custom IT Solutions",
-      description:
-        "Tailored system integration and infrastructure projects to match your business requirements.",
-      icon: <Code2 className="h-6 w-6 text-[#E2B478]" />,
+      title: "Strategic Growth & Knowledge Transfe",
+      description: (
+        <>
+          We don't just fix problems; we consult on future-proofing your
+          business and provide <b>Technical Transfer Services</b> to empower
+          your in-house teams.
+        </>
+      ),
     },
     {
-      title: "Cloud & Virtualization",
-      description:
-        "Seamless deployment of cloud platforms, virtualized servers, and enterprise applications.",
-      icon: <Database className="h-6 w-6 text-[#E2B478]" />,
+      title: "Reliable Partnership",
+      description: (
+        <>
+          Established in 2020, we are committed to building long-term
+          relationships and delivering high-quality, affordable solutions that
+          achieve complete customer satisfaction.
+        </>
+      ),
     },
   ];
 
@@ -280,7 +299,7 @@ const Solutions = () => {
                 <span>Enterprise-Grade Security</span>
               </div>
             </div>
-            <Link to="/contact#contacts">
+            <Link to="/contact">
               <Button
                 variant="primary"
                 size="lg"
@@ -324,9 +343,11 @@ const Solutions = () => {
           {solutions.map((solution, index) => (
             <Card key={index} delay={index} className="p-8">
               <div className="mb-6">{solution.icon}</div>
-              <h3 className="text-xl font-bold mb-4 min-h-[3rem]">{solution.title}</h3>
-              <p className="text-gray-400 mb-6">{solution.description}</p>
-              <ul className="space-y-2 mb-6">
+              <h3 className="text-xl font-bold mb-4 min-h-[3rem]">
+                {solution.title}
+              </h3>
+              <p className="text-gray-400">{solution.description}</p>
+              {/* <ul className="space-y-2 mb-6">
                 {solution.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-gray-300">
                     <div className="mr-2 text-[#E2B478]">
@@ -346,7 +367,7 @@ const Solutions = () => {
                     {feature}
                   </li>
                 ))}
-              </ul>
+              </ul> */}
               {/* <Link to="/contact" className="text-[#E2B478] hover:text-[#ebcba2] inline-flex items-center">
                 Learn more <ArrowRight className="ml-2 h-4 w-4" />
               </Link> */}
@@ -356,7 +377,7 @@ const Solutions = () => {
       </Section>
 
       {/* Industries Section */}
-      <Section
+      {/* <Section
         id="solution"
         title="Industries We Serve"
         subtitle="Reliable IT and network solutions for every industry"
@@ -403,25 +424,35 @@ const Solutions = () => {
             </motion.div>
           ))}
         </div>
-      </Section>
+      </Section> */}
 
       {/* Features Section */}
+
       <Section
         title="Why Choose Our Solutions"
         subtitle="Key features that set our IT solutions apart"
         centered
         className="bg-gray-900"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-          {features.map((feature, index) => (
-            <Card key={index} delay={index} className="p-8 text-center">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-800/80">
-                {feature.icon}
+        <div className="grid grid-cols-12">
+          <div className="flex flex-col gap-6 col-span-12 md:col-span-10">
+            {features.map((feature, idx) => (
+              <div key={idx} className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-gray-800/70 backdrop-blur-sm rounded-sm overflow-hidden font-semibold text-lg flex items-center justify-center text-center p-4">
+                  {feature.title}
+                </div>
+                <div className="md:col-span-2 p-6 bg-gray-800/70 backdrop-blur-sm rounded-sm overflow-hidden">
+                  {feature.description}
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
-            </Card>
-          ))}
+            ))}
+          </div>
+
+          <div className="col-span-12 md:col-span-2 flex items-end">
+            <div>
+              <img src={img14} alt="Feature" />
+            </div>
+          </div>
         </div>
       </Section>
 

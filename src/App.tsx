@@ -15,7 +15,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Auth from "./pages/Auth";
 import Support from "./pages/Support";
-import ScrollToTop from "./components/ScrollToTop.js";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 function App() {
   return (
     <Router>

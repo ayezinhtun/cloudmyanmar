@@ -130,7 +130,7 @@ const Clients = () => {
               projects for government agencies, enterprises, and corporates
               across Myanmar.
             </p>
-            <div className="grid grid-cols-2 gap-6 mb-8">
+            {/* <div className="grid grid-cols-2 gap-6 mb-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl font-bold text-[#E2B478] mb-2">
@@ -139,8 +139,8 @@ const Clients = () => {
                   <div className="text-gray-400">{stat.label}</div>
                 </div>
               ))}
-            </div>
-            <Link to="/contact#contacts">
+            </div> */}
+            <Link to="/contact">
               <Button
                 variant="primary"
                 size="lg"
@@ -305,14 +305,14 @@ const Clients = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link to="/contact#contacts">
+            <Link to="/contact">
               <Button variant="primary" size="lg">
                 Contact Us
               </Button>
             </Link>
-            <Link to="/services">
+            <Link to="/solutions">
               <Button variant="outline" size="lg">
-                Our Services
+                Our Solutions
               </Button>
             </Link>
           </motion.div>
