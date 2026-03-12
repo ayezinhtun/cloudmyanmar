@@ -59,7 +59,7 @@ const Home = () => {
     {
       title: (
         <>
-          Datacenter <br /> Services
+          Data Center <br /> Services
         </>
       ),
       icon: <HardDrive className="h-8 w-8 text-[#E2B478]" />,
