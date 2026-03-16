@@ -48,7 +48,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-900 to-indigo-950 z-0"></div>
       
       {/* Animated background particles */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
@@ -71,7 +71,7 @@ const HeroSection = () => {
             }}
           />
         ))}
-      </div>
+      </div> */}
       
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
